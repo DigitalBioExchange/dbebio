@@ -1,0 +1,186 @@
+<!--! 25_Index(Today) !-->
+<?php
+$gnb = "1";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+
+	<div class="index-main">
+		<div class="subject">
+			How is your health today?
+		</div>
+
+		<div class="bmi-bmr">
+			<ul>
+				<li class="tit">BMI</li>
+				<li class="icon Over">Over</li>
+			</ul>
+			<ul>
+				<li class="tit">Body fat rate</li>
+				<li class="icon Normal">Normal</li>
+			</ul>
+			<ul>
+				<li class="tit">BMR</li>
+				<li class="icon Low">Low</li>
+				<!-- <li class="icon Lean">Lean</li> -->
+				<!-- <li class="icon Obese">Obese</li> -->
+				<!-- <li class="icon High">High</li> -->
+			</ul>
+		</div>
+
+		<div class="tab-menu type-b">
+			<div class="inner-wrap">
+				<ul class="tab-header">
+					<li class="active">Today</li>
+					<li>This week</li>
+					<li>This month</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="medical-ex-results">
+			<ul>
+				<li class="Weight">
+					<div class="tit">Weight</div>
+					<div class="con">
+						<strong>56.0</strong><span class="unit">kg</span><span class="down">- 0.2kg</span>
+					</div>
+				</li>
+				<li class="Body-fat-rate">
+					<div class="tit">Body fat rate</div>
+					<div class="con">
+						<strong>28.9</strong><span class="unit">kg</span><span class="up">+ 3.2%</span>
+					</div>
+				</li>
+				<li class="Metabolic-age">
+					<div class="tit">Metabolic age</div>
+					<div class="con">
+						<strong>25</strong><span class="unit">years</span>
+					</div>
+				</li>
+				<li class="Health-score">
+					<div class="tit">Health score</div>
+					<div class="con">
+						<strong>89</strong><span class="unit">scores</span>
+					</div>
+				</li>
+				<li class="BMI">
+					<div class="tit">BMI</div>
+					<div class="con">
+						<div class="loading"></div>
+						<!-- 2021-03-25 팝업과 충돌 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+						<script type="text/javascript" src="../../js/lib/createWaterBall-jquery.js"></script>
+						<script>
+							var loadingEle = $('.loading');
+							$('.loading').createWaterBall({
+								cvs_config: {
+									width: 130,
+									height: 130
+								},
+								wave_config: {
+									waveWidth: 0.03,
+									waveHeight: 5
+								},
+								circle_config: {
+									r: 130 / 2,
+									cR: 130 / 2 - 5
+								},
+
+								lineWidth: 1,
+								isLoading: false,
+								nowRange: 0,
+								targetRange: 0,
+								data_range: [18.5, 25, 30, 50],
+								isLoading: true,
+
+								// text color
+								textColorRange: ['#e6e6e6', '#e6e6e6', '#e6e6e6', '#e6e6e6'],
+
+								// line color
+								circle_line_color: ['#FFD500', '#0090FF', '#FF9900', '#FF3156'],
+
+								// background color
+								main_backcolor_range: [['#FFD500', '#ffe669'], ['#0090FF', '#47b0ff'], ['#FF9900', '#febc5a'], ['#FF3156', '#ff758f']],
+
+								// background color
+								backcolor_range: [['#FFD500', '#ffe669'], ['#0090FF', '#47b0ff'], ['#FF9900', '#febc5a'], ['#FF3156', '#ff758f']],
+							});
+							setTimeout(function () {
+								$('.loading').createWaterBall('updateRange', 25.08);
+							}, 100);	
+						</script>
+
+						<div class="info">
+							<div class="subject">Compared to before</div>
+							<span class="up">+ 3.20</span>
+							<div class="result">You’re doing <strong>Great!</strong></div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+
+
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<!-- tab 관련 JS start-->
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		$(".tab-menu").each(function (index, thisTab) {
+			$(thisTab).find(".tab-header > li").on("click", function () {
+				$(thisTab).find(".tab-header > li").removeClass("active");
+				$(this).addClass("active");
+				var hasContent = $(thisTab).hasClass(".tab-content");
+				var activeIndex = $(thisTab).find(".tab-header > .active").index();
+				$(thisTab).find(".tab-content > div").removeClass("active");
+				$(thisTab).find(".tab-content > div").eq(activeIndex).addClass("active");
+			});
+		});
+
+	});
+</script>
+<!-- tab 관련 JS end-->
+
+
+
+<!-- 2021-03-25 -->
+<div class="popup radius8 show index-popup">
+	<div class="inner-wrap padding-a0">
+		<div class="popup-content margin-a0">
+			<img src="../../images/pc/index_popup.png" alt="image">
+		</div>
+		<button class="btn-medium btn-split2 margin-a0 radius4 b-close">하루 동안 안보기</button>
+		<button class="btn-medium btn-split2 margin-a0 radius4 b-close">닫기</button>
+	</div>
+</div>
+
+<!-- popup show형태 JS start -->
+<script type="text/javascript">
+	$(document).ready(function(){
+			$(".index-popup.show").bPopup({ // 팝업시키려는 대상 class 입력, show값은 고정
+				zIndex: 100, // z-index 순서설정
+				modalClose: true, // 영역제외 클릭해도 팝업창 닫히게합니까?
+				escClose: true, // esc눌르면 화면닫히게
+				follow: [true,true], // 화면을 따라다니게 만들기 설정값은 고정되는부분을 true로 둠 x, y
+				modal: true, // true시 백그라운드 dim 추가여부 true시 dim배경생김
+				opacity:0, // dim-layer opacity 설정
+				easing: 'linear' // animation css 효과 설정
+			});
+	});
+</script>
+<!-- popup show형태 JS end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

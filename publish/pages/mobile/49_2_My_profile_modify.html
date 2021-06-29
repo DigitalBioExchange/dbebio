@@ -1,0 +1,98 @@
+<!--! 49_2_My_profile_modify(popup) !-->
+<?php
+$page_option = "bgwhite header-white";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>프로필 관리</h1>
+		</div>
+
+		<form method="post" action="">
+			<div class="block-type-area">
+				<ul>
+					<li>
+						<div class="title"><span>*</span> 키</div>
+						<div class="con">
+							<div class="unit">
+								<!-- 2021-02-25 <input type="text" id="" name="" placeholder="키를 입력해주세요" class="input-regular unit-add" required > <span>cm</span> -->
+								<input type="text" id="" name="" placeholder="키를 입력해주세요" class="input-regular unit-add"
+									pattern="[0-9.]*" ​ title="숫자와 소수점만 입력 가능" required> <span>cm</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="title">성별</div>
+						<div class="con">
+							<select name="" class="input-regular">
+								<option value="" selected="selected">성별을 선택해주세요</option>
+								<option value=""></option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<div class="title"><span>*</span> 생년월일</div>
+						<div class="con">
+							<input type="text" name="" class="input-regular datepicker-here icon-type radius4" data-language="ko"
+								placeholder="YYYY-MM-DD">
+						</div>
+					</li>
+					<li>
+						<div class="title">닉네임</div>
+						<div class="con">
+							<input type="text" name="" class="input-regular radius4" placeholder="닉네임을 입력해주세요">
+						</div>
+					</li>
+				</ul>
+
+				<div class="btn-group-type1">
+					<button type="button" class="btn-medium width152 radius-half theme1-c-btn line">취소</button><button
+						type="submit" class="btn-medium width152 radius-half theme1-c-btn">수정</button>
+				</div>
+			</div>
+		</form>
+
+	</div>
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<div class="popup popup-coin-info radius16 show">
+	<div class="inner-wrap">
+		<h5 class="popup-header">코인 안내</h5>
+		<div class="popup-content">
+			<p>
+				<strong class="theme2-c-font">100</strong> 코인이 지급될 예정입니다.<br />
+				건강검진 데이터를 입력하거나 디바이스를 연결해서 <br />
+				추가 코인을 획득하세요!
+			</p>
+		</div>
+		<button class="btn-medium flexible theme1-c-btn radius-half b-close">닫기</button>
+		<span class="popup-close b-close"></span> <!-- b-close는 bPopup Js의 close class-->
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".popup-coin-info.show").bPopup({ // 팝업시키려는 대상 class 입력, show값은 고정
+			zIndex: 100, // z-index 순서설정
+			appendTo: '#content',
+			modalClose: true, // 영역제외 클릭해도 팝업창 닫히게합니까?
+			escClose: true, // esc눌르면 화면닫히게
+			follow: [true, true], // 화면을 따라다니게 만들기 설정값은 고정되는부분을 true로 둠 x, y
+			modal: true, // true시 백그라운드 dim 추가여부 true시 dim배경생김
+			opacity: 0.4, // dim-layer opacity 설정
+			easing: 'linear' // animation css 효과 설정
+		});
+	});
+</script>
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

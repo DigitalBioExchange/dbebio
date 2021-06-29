@@ -1,0 +1,343 @@
+<!--! 69_order_success !-->
+<?php 
+$gnb = "4";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>주문하기</h1>
+		</div>
+
+		<form>
+			<div class="cart-list">
+				<!-- cart-list 시작 -->
+				<div class="sub-title-small">
+					<h1>상품 정보</h1>
+				</div>
+				<ul>
+					<li>
+						<div class="p-img">
+							<div class="inner-wrap">
+								<a href="#none"><img src="../../images/pc/pd_02.png" alt="image"></a>
+							</div>
+						</div>
+						<div class="info">
+							<div class="title clamp1">오토첵 플러스 스마트 체중계</div>
+							<div class="option">
+								<p class="clamp1">옵션1/옵션2 <span class="qu">1개</span></p>
+							</div>
+							<div class="price">$45,000.00</div>
+						</div>
+					</li>
+					<li>
+						<div class="p-img">
+							<div class="inner-wrap">
+								<a href="#none"><img src="../../images/pc/no-image_type_a.png" alt="image"></a>
+							</div>
+						</div>
+						<div class="info">
+							<div class="title clamp1">상품명이 여기에 표시됩니다.</div>
+							<div class="option">
+								<p class="clamp1">1개</p>
+							</div>
+							<div class="price">$45,000.00</div>
+						</div>
+					</li>
+				</ul>
+			</div><!-- cart-list 끝 -->
+
+
+			<div class="order-info">
+				<!-- 주문자 정보 시작 -->
+				<div class="sub-title-small padding-t40">
+					<h1>주문자 정보</h1>
+				</div>
+				<div class="block-type-area">
+					<ul class="padding-a0">
+						<li class="margin-t16">
+							<div class="title">이름</div>
+							<div class="con">
+								<input type="text" name="" class="input-regular radius4" value="이신원">
+							</div>
+						</li>
+						<li>
+							<div class="title">이메일</div>
+							<div class="con">
+								<input type="email" name="" class="input-regular radius4" value="userid@email.com"
+									placeholder="이메일을 입력해주세요" pattern="[^ @]*@[^ @]*" ​ required>
+							</div>
+						</li>
+						<li>
+							<div class="title">연락처</div>
+							<div class="con">
+								<select name="" class="input-regular">
+									<option value="" selected="selected">+85 &nbsp; &nbsp; &nbsp; Republic of Korea</option>
+									<option value=""></option>
+								</select>
+								<input type="text" name="" class="input-regular radius4 margin-t8" value="010-1234-5678"
+									pattern="[0-9-\-]*" ​ title="숫자와 -만 입력 가능">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- 주문자 정보 끝 -->
+
+			<div class="order-info">
+				<!-- 배송지정보 시작 -->
+				<div class="sub-title-small padding-t40">
+					<h1>배송지정보</h1>
+				</div>
+				<div class="block-type-area">
+					<ul class="padding-a0">
+						<li class="margin-t16">
+							<div class="title">수령자 이름</div>
+							<div class="con">
+								<input type="text" name="" class="input-regular radius4" placeholder="수령자 이름을 입력해주세요">
+							</div>
+						</li>
+						<li>
+							<div class="title">수령자 연락처</div>
+							<div class="con">
+								<select name="" class="input-regular">
+									<option value="" selected="selected">+01 &nbsp; &nbsp; &nbsp; USA</option>
+									<option value=""></option>
+								</select>
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="수령자 연락처를 입력해주세요"
+									pattern="[0-9-\-]*" ​ title="숫자와 -만 입력 가능">
+							</div>
+						</li>
+						<li>
+							<div class="title">주소</div>
+							<div class="con">
+								<input type="text" name="" class="input-regular radius4" placeholder="Address line1"
+									pattern="[0-9-a-z-A-Z.;\-]*" ​ title="영어대소문자, 숫자, 특수문자만 입력 가능">
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="Address line2(optional)"
+									pattern="[0-9-a-z-A-Z.;\-]*" ​ title="영어대소문자, 숫자, 특수문자만 입력 가능">
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="City"
+									pattern="[0-9-a-z-A-Z.;\-]*" ​ title="영어대소문자, 숫자, 특수문자만 입력 가능">
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="State/Province"
+									pattern="[0-9-a-z-A-Z.;\-]*" ​ title="영어대소문자, 숫자, 특수문자만 입력 가능">
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="Zip/Postal Code"
+									pattern="[0-9-a-z-A-Z.;\-]*" ​ title="영어대소문자, 숫자, 특수문자만 입력 가능">
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="Country"
+									pattern="[0-9-a-z-A-Z.;\-]*" ​ title="영어대소문자, 숫자, 특수문자만 입력 가능">
+								<p class="help-text">- 영어대소문자, 숫자, 특수문자만 입력 가능</p>
+							</div>
+						</li>
+						<li>
+							<div class="title">배송 요청사항</div>
+							<div class="con">
+								<input type="text" name="" class="input-regular radius4" placeholder="배송 요청사항을 입력해주세요">
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="precautions margin-t24">
+					<h1>배송 불가지역 안내</h1>
+					<p>
+						현재 코로나 사태로 인해 중동지역은 배송이
+						불가능하거나 지연될 수 있습니다.
+					</p>
+				</div>
+			</div><!-- 배송지정보 끝 -->
+
+			<div class="order-info">
+				<!-- order-info 시작 -->
+				<div class="sub-title-small padding-t40">
+					<h1>결제정보</h1>
+				</div>
+
+				<div class="info">
+					<ul>
+						<li class="tit">총 금액</li>
+						<li class="con">$ 000,000.00</li>
+					</ul>
+					<ul>
+						<li class="tit">할인 금액</li>
+						<li class="con">- $ 000,000.00</li>
+					</ul>
+					<ul>
+						<li class="tit">배송비</li>
+						<li class="con">$ 000,000.00</li>
+					</ul>
+					<ul>
+						<li class="tit">결제수수료</li>
+						<li class="con">$ 000,000.00</li>
+					</ul>
+					<hr />
+					<ul class="total">
+						<li class="tit">최종 결제 금액</li>
+						<li class="con">
+							<strong>LBXC 0.00</strong>
+							<span>$000,000.00</span>
+						</li>
+					</ul>
+				</div>
+			</div><!-- order-info 끝 -->
+
+			<div class="btn-group-type1">
+				<div class="center">
+					<button type="submit" class="btn-medium width160 theme1-c-btn radius-half">결제</button>
+				</div>
+			</div>
+		</form>
+
+	</div>
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+<div class="popup popup-order_success radius16 show">
+	<div class="inner-wrap">
+		<h5 class="popup-header">주문완료</h5>
+		<div class="cart-list">
+			<!-- cart-list 시작 -->
+			<div class="sub-title-small">
+				<h1>2020-12-01</h1>
+				<span class="order-number">주문번호 2020120100001</span>
+			</div>
+			<ul>
+				<li>
+					<div class="p-img">
+						<div class="inner-wrap">
+							<a href="#none"><img src="../../images/pc/pd_02.png" alt="image"></a>
+						</div>
+					</div>
+					<div class="info">
+						<div class="title clamp1">오토첵 플러스 스마트 체중계</div>
+						<div class="option">
+							<p class="clamp1">옵션1/옵션2 <span class="qu">1개</span></p>
+						</div>
+						<div class="price">$45,000.00</div>
+					</div>
+				</li>
+			</ul>
+		</div><!-- cart-list 끝 -->
+
+		<div class="order-info padding-b0">
+			<div class="sub-title-small padding-t24">
+				<!-- 주문자 정보 시작 -->
+				<h1>주문자 정보</h1>
+			</div>
+			<div class="area">
+				<ul>
+					<li class="tit">이름</li>
+					<li class="con">김또깡</li>
+				</ul>
+				<ul>
+					<li class="tit">이메일</li>
+					<li class="con">ttokkang@ttotto.com</li>
+				</ul>
+				<ul>
+					<li class="tit">연락처</li>
+					<li class="con">010-1234-5678</li>
+				</ul>
+			</div><!-- 주문자 정보 끝 -->
+
+			<div class="sub-title-small padding-t0">
+				<!-- 배송지정보 시작 -->
+				<h1>배송지정보</h1>
+			</div>
+			<div class="area">
+				<ul>
+					<li class="tit">이름</li>
+					<li class="con">김또깡</li>
+				</ul>
+				<ul>
+					<li class="tit">연락처</li>
+					<li class="con">010-1234-5678</li>
+				</ul>
+				<ul>
+					<li class="tit">국가 선택</li>
+					<li class="con">대한민국</li>
+				</ul>
+				<ul>
+					<li class="tit">상세주소</li>
+					<li class="con">
+						서울시 구로구 디지털로 30길 28,
+						마리오타워 513호
+					</li>
+				</ul>
+				<ul>
+					<li class="tit">배송 요청사항</li>
+					<li class="con">문 앞에 두고 가주세요</li>
+				</ul>
+			</div><!-- 배송지정보 끝 -->
+
+			<div class="sub-title-small padding-t0">
+				<!-- 결제정보 시작 -->
+				<h1>결제정보</h1>
+			</div>
+			<div class="area">
+				<ul>
+					<li class="tit">총 금액</li>
+					<li class="con">$ 000,000.00</li>
+				</ul>
+				<ul>
+					<li class="tit">할인 금액</li>
+					<li class="con">- $ 000,000.00</li>
+				</ul>
+				<ul>
+					<li class="tit">배송비</li>
+					<li class="con">$ 000,000.00</li>
+				</ul>
+				<ul>
+					<li class="tit">결제수수료</li>
+					<li class="con">$ 000,000.00</li>
+				</ul>
+				<ul>
+					<li class="tit">최종 결제 금액</li>
+					<li class="con">
+						<strong class="theme2-c-font font-weight600">LBXC 0.0000</strong>
+						<p class="theme2-c-font">$ 000,000.00</p>
+					</li>
+				</ul>
+			</div><!-- 결제정보 끝 -->
+		</div>
+		<span class="popup-close b-close"></span> <!-- b-close는 bPopup Js의 close class-->
+	</div>
+</div>
+
+<!-- popup show형태 JS start -->
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".popup-order_success.show").bPopup({ // 팝업시키려는 대상 class 입력, show값은 고정
+			zIndex: 100, // z-index 순서설정
+			appendTo: '#content',
+			modalClose: true, // 영역제외 클릭해도 팝업창 닫히게합니까?
+			escClose: true, // esc눌르면 화면닫히게
+			follow: [true, true], // 화면을 따라다니게 만들기 설정값은 고정되는부분을 true로 둠 x, y
+			modal: true, // true시 백그라운드 dim 추가여부 true시 dim배경생김
+			opacity: 0.4, // dim-layer opacity 설정
+			easing: 'linear' // animation css 효과 설정
+		});
+	});
+</script>
+<!-- popup show형태 JS end-->
+
+
+<!-- 말줄임 관련 JS start-->
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.clamp1').each(function (index, clampOne) {
+			$clamp(clampOne, { clamp: 1 });
+		});
+
+		$('.clamp2').each(function (index, clampTwo) {
+			$clamp(clampTwo, { clamp: 2 });
+		});
+
+		$('.clamp3').each(function (index, clampThree) {
+			$clamp(clampThree, { clamp: 3 });
+		});
+	});
+</script>
+<!-- 말줄임 관련 JS end-->
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

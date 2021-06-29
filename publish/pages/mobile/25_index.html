@@ -1,0 +1,108 @@
+<!--! 25_index(This week) !-->
+<?php 
+$page_option = "index";
+$logo = "active";
+$back = "not";
+$gnb = "1";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+	
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	
+	<div class="index-main">
+		<div class="subject">
+			How is your health today?
+		</div>
+
+		<div class="bmi-bmr">
+			<ul>
+				<li class="tit">BMI</li>
+				<li class="icon Over">Over</li>
+			</ul>
+			<ul>
+				<li class="tit">Body fat rate</li>
+				<li class="icon Normal">Normal</li>
+			</ul>
+			<ul>
+				<li class="tit">BMR</li>
+				<li class="icon Low">Low</li>
+			</ul>
+		</div>
+		
+		<div class="tab-menu type-b">
+			<div class="inner-wrap">
+				<ul class="tab-header">
+					<li>Today</li>
+					<li class="active">This week</li>
+					<li>This month</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="This-week-result"><!-- This-week-result 시작 -->
+			<ul>
+				<li>
+					<div class="tit Weight">Weight</div>
+					<div class="graph">
+						<div class="chartjs-wrapper"><!-- cart 시작 -->
+						<canvas id="chartjs-0" class="chartjs" width="undefined" height="undefined"></canvas><script>new Chart(document.getElementById("chartjs-0"),{"type":"line","data":{"labels":["SUN","MON","TUE","WED","THU","FRI","SAT"],"datasets":[{"label":"","data":[75,63,68,62,69,62,65],"fill":"#e4eff3","borderColor":"#99c6d8","borderWidth":"2","pointBackgroundColor":"#fff","backgroundColor":"#e4eff3","lineTension":0.3}]},"options":{}});</script></div><!-- cart 끌 -->
+					</div>
+				</li>
+				<li>
+					<div class="tit Body-fat-rate">Body fat rate</div>
+					<div class="graph">
+						<div class="chartjs-wrapper"><!-- cart 시작 -->
+						<canvas id="chartjs-1" class="chartjs" width="undefined" height="undefined"></canvas><script>new Chart(document.getElementById("chartjs-1"),{"type":"line","data":{"labels":["SUN","MON","TUE","WED","THU","FRI","SAT"],"datasets":[{"label":"","data":[65,63,68,62,69,62,65],"fill":"#e4eff3","borderColor":"#99c6d8","borderWidth":"2","pointBackgroundColor":"#fff","backgroundColor":"#e4eff3","lineTension":0.3}]},"options":{}});</script></div><!-- cart 끌 -->
+					</div>
+				</li>
+				<li>
+					<div class="tit Health-score">Health score</div>
+					<div class="graph">
+						<div class="chartjs-wrapper"><!-- cart 시작 -->
+						<canvas id="chartjs-3" class="chartjs" width="undefined" height="undefined"></canvas><script>new Chart(document.getElementById("chartjs-3"),{"type":"line","data":{"labels":["SUN","MON","TUE","WED","THU","FRI","SAT"],"datasets":[{"label":"","data":[71,63,68,62,69,62,65],"fill":"#e4eff3","borderColor":"#99c6d8","borderWidth":"2","pointBackgroundColor":"#fff","backgroundColor":"#e4eff3","lineTension":0.3}]},"options":{}});</script></div><!-- cart 끌 -->
+					</div>
+				</li>
+				<li>
+					<div class="tit BMI">BMI</div>
+					<div class="graph">
+						<div class="chartjs-wrapper"><!-- cart 시작 -->
+						<canvas id="chartjs-4" class="chartjs" width="undefined" height="undefined"></canvas><script>new Chart(document.getElementById("chartjs-4"),{"type":"line","data":{"labels":["SUN","MON","TUE","WED","THU","FRI","SAT"],"datasets":[{"label":"","data":[59,63,68,62,69,62,65],"fill":"#e4eff3","borderColor":"#99c6d8","borderWidth":"2","pointBackgroundColor":"#fff","backgroundColor":"#e4eff3","lineTension":0.3}]},"options":{}});</script></div><!-- cart 끌 -->
+					</div>
+				</li>
+			</ul>
+		</div><!-- This-week-result 끝 -->
+
+	</div>
+
+
+
+</section>
+<!-- *컨텐츠* 끝 -->	
+	
+	
+
+<!-- tab 관련 JS start-->
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(".tab-menu").each(function(index, thisTab){
+	$(thisTab).find(".tab-header > li").on("click",function(){
+		$(thisTab).find(".tab-header > li").removeClass("active");
+		$(this).addClass("active");
+		var hasContent = $(thisTab).hasClass(".tab-content");
+		var activeIndex= $(thisTab).find(".tab-header > .active").index();
+		$(thisTab).find(".tab-content > div").removeClass("active");
+		$(thisTab).find(".tab-content > div").eq(activeIndex).addClass("active");
+	});
+});
+
+});
+</script>
+<!-- tab 관련 JS end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

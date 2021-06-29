@@ -1,0 +1,172 @@
+<!--! 66_Cart !-->
+<?php 
+$gnb = "4";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>장바구니</h1>
+		</div>
+
+		<form>
+			<div class="cart-list">
+				<!-- cart-list 시작 -->
+				<div class="btn">
+					<button type="button" class="btn-regular radius4">전체삭제</button><button type="button"
+						class="btn-regular radius4">선택삭제</button>
+				</div>
+
+				<div class="sub-title-small">
+					<h1>상품 정보</h1>
+				</div>
+				<ul>
+					<li>
+						<div class="p-img padding-b12">
+							<div class="inner-wrap">
+								<a href="#none"><img src="../../images/pc/pd_02.png" alt="image"></a>
+							</div>
+						</div>
+						<div class="info">
+							<div class="title clamp1">오토첵 플러스 스마트 체지방계 오토첵 플러스 스마트 체지방계</div>
+							<div class="summary">
+								<p class="clamp1">상품의 간략설명이 여기에 들어갑니다 상품의 간략설명이 여기에 들어갑니다</p>
+							</div>
+							<div class="option">
+								<p class="clamp1">옵션: 옵션1/옵션2</p>
+							</div>
+						</div>
+						<button type="button" class="delete">삭제</button>
+						<input type="checkbox" name="" class="chk" checked>
+						<div class="quantity-price">
+							<div class="quantity-inner small">
+								<button type="button" class="btn-minus"><span>마이너스</span></button>
+								<input type="text" name="" class="input" value="1" />
+								<button type="button" class="btn-plus"><span>플러스</span></button>
+							</div>
+							<div class="price-wrap">
+								<div class="origin">$50,000.00</div>
+								<div class="price">$45,000.00</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="p-img padding-b12">
+							<div class="inner-wrap">
+								<a href="#none"><img src="../../images/pc/no-image_type_a.png" alt="image"></a>
+							</div>
+						</div>
+						<div class="info">
+							<div class="title clamp1">상품명이 여기에 표시됩니다.</div>
+							<div class="summary">
+								<p class="clamp1">상품의 간략설명이 여기에 들어갑니다. 상품의 간략설명이 여기에 들어갑니다.</p>
+							</div>
+							<div class="option">
+								<p class="clamp1">옵션: 옵션1/옵션2</p>
+							</div>
+						</div>
+						<button type="button" class="delete">삭제</button>
+						<input type="checkbox" name="" class="chk">
+						<div class="quantity-price">
+							<div class="quantity-inner small">
+								<button type="button" class="btn-minus"><span>마이너스</span></button>
+								<input type="text" name="" class="input" value="1" />
+								<button type="button" class="btn-plus"><span>플러스</span></button>
+							</div>
+							<div class="price-wrap">
+								<div class="origin">$50,000.00</div>
+								<div class="price">$45,000.00</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div><!-- cart-list 끝 -->
+
+
+			<div class="padding-bgwhite">
+				<div class="market-list">
+					<!-- market-list 시작 -->
+					<div class="coin-price padding-a0">
+						<div>
+							<div class="tit">LBXC</div>
+							<div class="con"><strong>123,123,123.0000</strong></div>
+							<div class="date">2020.12.21 기준</div>
+							<div class="default"><span>0.0000</span><span>0.00%</span></div>
+						</div>
+					</div>
+				</div><!-- market-list 끝 -->
+			</div>
+
+
+			<div class="order-info">
+				<!-- order-info 시작 -->
+				<div class="sub-title-small">
+					<h1>주문 정보</h1>
+				</div>
+
+				<div class="info">
+					<ul>
+						<li class="tit">선택한 상품 개수</li>
+						<li class="con">0개</li>
+					</ul>
+					<ul>
+						<li class="tit">총 금액</li>
+						<li class="con">$ 000,000.00</li>
+					</ul>
+					<ul>
+						<li class="tit">할인 금액</li>
+						<li class="con">- $ 000,000.00</li>
+					</ul>
+					<ul>
+						<li class="tit">배송비</li>
+						<li class="con">배송지역 별 상이</li>
+					</ul>
+					<hr />
+					<ul class="total">
+						<li class="tit">최종 주문 금액</li>
+						<li class="con">
+							<strong>LBXC 0.0000</strong>
+							<span>$000,000.00</span>
+						</li>
+					</ul>
+				</div>
+			</div><!-- order-info 끝 -->
+
+			<div class="btn-group-type1">
+				<div class="center">
+					<button type="button" class="btn-medium width152 radius-half theme1-c-btn line">선택 주문하기</button><button
+						type="submit" class="btn-medium width152 radius-half theme1-c-btn">전체 주문하기</button>
+				</div>
+			</div>
+		</form>
+
+	</div>
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<!-- 말줄임 관련 JS start-->
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.clamp1').each(function (index, clampOne) {
+			$clamp(clampOne, { clamp: 1 });
+		});
+
+		$('.clamp2').each(function (index, clampTwo) {
+			$clamp(clampTwo, { clamp: 2 });
+		});
+
+		$('.clamp3').each(function (index, clampThree) {
+			$clamp(clampThree, { clamp: 3 });
+		});
+	});
+</script>
+<!-- 말줄임 관련 JS end-->
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

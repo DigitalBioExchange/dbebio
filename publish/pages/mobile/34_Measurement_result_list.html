@@ -1,0 +1,160 @@
+<!--! 34_Measurement_result_list !-->
+<?php 
+$page_option = "header-white";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>체성분 측정</h1>
+		</div>
+
+		<div class="tab-menu type-c">
+			<div class="inner-wrap">
+				<ul class="tab-header">
+					<li>측정하기</li>
+					<li class="active">측정내역</li>
+					<li>그래프</li>
+				</ul>
+
+				<div class="tab-content">
+					<div>
+						측정하기 내용
+					</div>
+					<div class="active">
+						
+						<div class="Measurement-result-list"><!-- Measurement-result-list 시작 -->
+							<ul>
+								<li>
+									<div class="date-detail">
+										<div class="date">2020-11-26</div>
+										<a href="#none" class="detail">상세 측정내역</a>
+									</div>
+									<div class="weight-bmi">
+										<ul>
+											<li class="tit">Weight</li>
+											<li class="con"><strong>56.0</strong><span>kg</span></li>
+										</ul>
+										<ul>
+											<li class="tit">Body fat rate</li>
+											<li class="con"><strong>28.5</strong><span>%</span></li>
+										</ul>
+										<ul>
+											<li class="tit">BMI</li>
+											<li class="con"><strong>20.08</strong></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="date-detail">
+										<div class="date">2020-11-26</div>
+										<a href="#none" class="detail">상세 측정내역</a>
+									</div>
+									<div class="weight-bmi">
+										<ul>
+											<li class="tit">Weight</li>
+											<li class="con"><strong>56.0</strong><span>kg</span></li>
+										</ul>
+										<ul>
+											<li class="tit">Body fat rate</li>
+											<li class="con"><strong>28.5</strong><span>%</span></li>
+										</ul>
+										<ul>
+											<li class="tit">BMI</li>
+											<li class="con"><strong>20.08</strong></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="date-detail">
+										<div class="date">2020-11-26</div>
+										<a href="#none" class="detail">상세 측정내역</a>
+									</div>
+									<div class="weight-bmi">
+										<ul>
+											<li class="tit">Weight</li>
+											<li class="con"><strong>56.0</strong><span>kg</span></li>
+										</ul>
+										<ul>
+											<li class="tit">Body fat rate</li>
+											<li class="con"><strong>28.5</strong><span>%</span></li>
+										</ul>
+										<ul>
+											<li class="tit">BMI</li>
+											<li class="con"><strong>20.08</strong></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="date-detail">
+										<div class="date">2020-11-26</div>
+										<a href="#none" class="detail">상세 측정내역</a>
+									</div>
+									<div class="weight-bmi">
+										<ul>
+											<li class="tit">Weight</li>
+											<li class="con"><strong>56.0</strong><span>kg</span></li>
+										</ul>
+										<ul>
+											<li class="tit">Body fat rate</li>
+											<li class="con"><strong>28.5</strong><span>%</span></li>
+										</ul>
+										<ul>
+											<li class="tit">BMI</li>
+											<li class="con"><strong>20.08</strong></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div><!-- Measurement-result-list 끝 -->
+
+						<div class="paginate-area">
+						<ul>
+							<li class="dir prev"><a href="#"></a></li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li class="on"><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li class="dir next"><a href="#"></a></li>
+						</ul>
+						</div>
+
+					</div>
+					<div>그래프 내용</div>
+				</div>
+			</div>
+		</div>
+
+	</div>	
+</section>
+<!-- *컨텐츠* 끝 -->	
+	
+	
+
+<!-- tab 관련 JS start-->
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(".tab-menu").each(function(index, thisTab){
+	$(thisTab).find(".tab-header > li").on("click",function(){
+		$(thisTab).find(".tab-header > li").removeClass("active");
+		$(this).addClass("active");
+		var hasContent = $(thisTab).hasClass(".tab-content");
+		var activeIndex= $(thisTab).find(".tab-header > .active").index();
+		$(thisTab).find(".tab-content > div").removeClass("active");
+		$(thisTab).find(".tab-content > div").eq(activeIndex).addClass("active");
+	});
+});
+
+});
+</script>
+<!-- tab 관련 JS end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

@@ -1,0 +1,109 @@
+<!--! 54_Health_screening_history !-->
+<?php 
+$page_option = "header-white";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+	
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="sub-title-area">
+		<h1>검진내역</h1>
+	</div>
+
+	<div class="health-screening-history">
+		<ul>
+			<li>
+				<a href="#none">
+				<div class="img">
+					<img src="../../images/mobile/img_hospital.png" alt="image">
+				</div>
+				<div class="info">
+					<div class="title">
+						<p class="clamp1">새마을병원</p>
+					</div>
+					<div class="date">2020-11-26</div>
+				</div>
+				</a>
+			</li>
+			<li>
+				<a href="#none">
+				<div class="img">
+					<img src="../../images/mobile/img_hospital.png" alt="image">
+				</div>
+				<div class="info">
+					<div class="title">
+						<p class="clamp1">세브란스병원</p>
+					</div>
+					<div class="date">2020-11-26</div>
+				</div>
+				</a>
+			</li>
+			<li>
+				<a href="#none">
+				<div class="img">
+					<img src="../../images/mobile/img_hospital.png" alt="image">
+				</div>
+				<div class="info">
+					<div class="title">
+						<p class="clamp1">현대아산병원</p>
+					</div>
+					<div class="date">2020-11-26</div>
+				</div>
+				</a>
+			</li>
+			<li>
+				<a href="#none">
+				<div class="img">
+					<img src="../../images/mobile/img_hospital.png" alt="image">
+				</div>
+				<div class="info">
+					<div class="title">
+						<p class="clamp1">고려대학병원</p>
+					</div>
+					<div class="date">2020-11-26</div>
+				</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="paginate-area">
+	<ul>
+		<li class="dir prev"><a href="#"></a></li>
+		<li><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li class="on"><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">5</a></li>
+		<li class="dir next"><a href="#"></a></li>
+	</ul>
+	</div>
+
+</section>
+<!-- *컨텐츠* 끝 -->	
+	
+
+
+<!-- 말줄임 관련 JS start-->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.clamp1').each(function(index, clampOne) {
+	$clamp(clampOne, { clamp: 1 });
+	});
+	
+	$('.clamp2').each(function(index, clampTwo) {
+	$clamp(clampTwo, { clamp: 2 });
+	});
+	
+	$('.clamp3').each(function(index, clampThree) {
+	$clamp(clampThree, { clamp: 3 });
+	});
+});
+</script>
+<!-- 말줄임 관련 JS end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

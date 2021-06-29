@@ -1,0 +1,50 @@
+<!--! 51_Site_privacy !-->
+<?php require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	 
+
+
+</section>
+<!-- *컨텐츠* 끝 -->	
+
+
+<div class="popup popup-full show">
+	<div class="inner-wrap">
+		<h5 class="popup-header">개인정보처리방침</h5>
+		<div class="popup-content">
+			
+			<div class="temp-content">
+				<pre>개인정보처리방침 내용이 여기에 표시됩니다.
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+				</pre>
+			</div>
+
+		</div>
+		<span class="popup-close b-close"></span>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+			$(".popup-full.show").bPopup({ // 팝업시키려는 대상 class 입력, show값은 고정
+				zIndex: 100, // z-index 순서설정
+				appendTo:'#content', 
+				modalClose: true, // 영역제외 클릭해도 팝업창 닫히게합니까?
+				escClose: true, // esc눌르면 화면닫히게
+				follow: [true,true], // 화면을 따라다니게 만들기 설정값은 고정되는부분을 true로 둠 x, y
+				modal: true, // true시 백그라운드 dim 추가여부 true시 dim배경생김
+				opacity:0.4, // dim-layer opacity 설정
+				easing: 'linear' // animation css 효과 설정
+			});
+	});
+</script>
+ 	
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

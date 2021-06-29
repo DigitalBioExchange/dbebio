@@ -1,0 +1,79 @@
+<!--! 48_My_info_modify !-->
+<?php
+$page_option = "bgwhite header-white";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>내 정보수정</h1>
+		</div>
+
+		<form method="post" action="">
+			<div class="block-type-area">
+				<ul>
+					<li>
+						<div class="title">휴대폰번호</div>
+						<div class="con">
+							<select name="" class="input-regular">
+								<option value="" selected="selected">+01 USA</option>
+								<option value=""></option>
+							</select>
+							<div class="margin-t8">
+								<!-- 2021-02-25 <input type="text" id="" name="" placeholder="휴대폰번호를 입력해주세요" pattern="[0-9]*" maxlength="12"  title="숫자만 입력가능합니다" class="input-regular radius4 btn-add"><button type="button" class="btn-regular radius4">인증받기</button> -->
+								<input type="text" id="" name="" placeholder="휴대폰번호를 입력해주세요" maxlength="12" pattern="[0-9-]*"
+									title="숫자와 -만 입력 가능" class="input-regular radius4 btn-add"><button type="button"
+									class="btn-regular radius4">인증받기</button>
+							</div>
+							<div class="help-text">- 중복된 휴대폰번호입니다. 다른 휴대폰번호를 입력하세요.</div>
+						</div>
+					</li>
+					<li>
+						<div class="title">인증번호</div>
+						<div class="con">
+							<!-- 2021-02-25 <input type="text" name="" class="input-regular radius4 btn-add" placeholder="인증번호를 입력해주세요."><button
+								type="button" class="btn-regular radius4">확인</button> -->
+							<input type="text" name="" class="input-regular radius4 btn-add" placeholder="인증번호를 입력해주세요."
+								pattern="[0-9]*" title="숫자만 입력 가능"><button type="button" class="btn-regular radius4">확인</button>
+						</div>
+					</li>
+					<li>
+						<div class="title"><span>*</span> 비밀번호</div>
+						<div class="con">
+							<input type="password" name="" class="input-regular radius4" placeholder="비밀번호를 입력해주세요" required>
+						</div>
+					</li>
+					<li>
+						<div class="title">새 비밀번호</div>
+						<div class="con">
+							<input type="password" name="" class="input-regular radius4" placeholder="새로운 비밀번호를 입력해주세요">
+							<div class="help-text">- 비밀번호는 4글자 이상 입력하세요.</div>
+						</div>
+					</li>
+					<li>
+						<div class="title">이름</div>
+						<div class="con">
+							<input type="text" name="" class="input-regular radius4" placeholder="이름을 입력해주세요" value="홍길동" required>
+						</div>
+					</li>
+				</ul>
+
+				<div class="btn-group-type1">
+					<button type="button" class="btn-medium width152 radius-half theme1-c-btn line">취소</button><button
+						type="submit" class="btn-medium width152 radius-half theme1-c-btn">수정</button>
+				</div>
+			</div>
+		</form>
+
+	</div>
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

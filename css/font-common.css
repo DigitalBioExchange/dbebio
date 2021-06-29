@@ -1,0 +1,76 @@
+@font-face {
+ font-family:'notokr';
+ font-weight:300;
+ src:url(../css/font/notokr-light.eot);
+ src:url(../css/font/notokr-light.eot?#iefix) format('embedded-opentype'),
+      url(../css/font/notokr-light.woff) format('woff'),
+      url(../css/font/notokr-light.woff2) format('woff2'),
+      url(../css/font/notokr-light.ttf) format('truetype');
+}
+@font-face {
+ font-family:'notokr';
+ font-style:normal;
+ font-weight:400;
+ src:url(../css/font/notokr-regular.eot);
+ src:url(../css/font/notokr-regular.eot?#iefix) format('embedded-opentype'),
+      url(../css/font/notokr-regular.woff) format('woff'),
+      url(../css/font/notokr-regular.woff2) format('woff2'),
+      url(../css/font/notokr-regular.ttf) format('truetype');
+}
+@font-face {
+ font-family:'notokr';
+ font-weight:700;
+ src:url(../css/font/notokr-medium.eot);
+ src:url(../css/font/notokr-medium.eot?#iefix) format('embedded-opentype'),
+      url(../css/font/notokr-medium.woff) format('woff'),
+      url(../css/font/notokr-medium.woff2) format('woff2'),
+      url(../css/font/notokr-medium.ttf) format('truetype');
+}
+@font-face {
+ font-family:'notokr';
+ font-weight:800;
+ src:url(../css/font/notokr-bold.eot);
+ src:url(../css/font/notokr-bold.eot?#iefix) format('embedded-opentype'),
+      url(../css/font/notokr-bold.woff) format('woff'),
+      url(../css/font/notokr-bold.woff2) format('woff2'),
+      url(../css/font/notokr-bold.ttf) format('truetype');
+}
+@font-face {
+ font-family:'notokr';
+ font-weight:900;
+ src:url(../css/font/notokr-black.eot);
+ src:url(../css/font/notokr-black.eot?#iefix) format('embedded-opentype'),
+      url(../css/font/notokr-black.woff) format('woff'),
+      url(../css/font/notokr-black.woff2) format('woff2'),
+      url(../css/font/notokr-black.ttf) format('truetype');
+}
+@font-face {
+ font-family:'NanumSquare';
+ font-style:normal;
+ font-weight:400;
+ src:url(../css/font/NanumSquareR.eot);
+ src:url(../css/font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+      url(../css/font/NanumSquareR.woff) format('woff'),
+      url(../css/font/NanumSquareR.woff2) format('woff2'),
+      url(../css/font/NanumSquareR.ttf) format('truetype');
+}
+@font-face {
+ font-family:'NanumSquare';
+ font-style:bold;
+ font-weight:700;
+ src:url(../css/font/NanumSquareB.eot);
+ src:url(../css/font/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+      url(../css/font/NanumSquareB.woff) format('woff'),
+      url(../css/font/NanumSquareB.woff2) format('woff2'),
+      url(../css/font/NanumSquareB.ttf) format('truetype');
+}
+@font-face {
+ font-family:'NanumSquare';
+ font-style:bold;
+ font-weight:800;
+ src:url(../css/font/NanumSquareEB.eot);
+ src:url(../css/font/NanumSquareEB.eot?#iefix) format('embedded-opentype'),
+      url(../css/font/NanumSquareEB.woff) format('woff'),
+      url(../css/font/NanumSquareEB.woff2) format('woff2'),
+      url(../css/font/NanumSquareEB.ttf) format('truetype');
+}

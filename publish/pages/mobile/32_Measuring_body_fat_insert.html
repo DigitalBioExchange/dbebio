@@ -1,0 +1,71 @@
+<!--! 32_Measuring_body_fat_insert !-->
+<?php
+$page_option = "bgwhite header-white";
+$log = "out";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>수기입력</h1>
+		</div>
+
+		<form method="post" action="">
+		<div class="block-type-area">
+			<ul>
+				<li>
+					<div class="title">측정일</div>
+					<div class="con">
+						<input type="text" class="input-regular datepicker-here icon-type radius4" data-language="ko" name="" value="2020-12-02"/>
+					</div>
+				</li>
+				<li>
+					<div class="title"><span>*</span> 체중(kg)</div>
+					<div class="con">
+						<input type="text" name="" class="input-regular radius4" placeholder="체중을 입력해주세요" pattern="[0-9]*" title="숫자만 입력" required>
+					</div>
+				</li>
+				<li>
+					<div class="title">체지방율(%)</div>
+					<div class="con">
+						<input type="text" name="" class="input-regular radius4" placeholder="체지방율을 입력해주세요" pattern="[0-9]*" title="숫자만 입력">
+					</div>
+				</li>
+				<li>
+					<div class="title">체내수분량(%)</div>
+					<div class="con">
+						<input type="text" name="" class="input-regular radius4" placeholder="체내수분량을 입력해주세요" pattern="[0-9]*" title="숫자만 입력">
+					</div>
+				</li>
+				<li>
+					<div class="title">골질량(kg)</div>
+					<div class="con">
+						<input type="text" name="" class="input-regular radius4" placeholder="골질량을 입력해주세요" pattern="[0-9]*" title="숫자만 입력">
+					</div>
+				</li>
+				<li>
+					<div class="title">기초대사율(kcal)</div>
+					<div class="con">
+						<input type="text" name="" class="input-regular radius4" placeholder="기초대사율을 입력해주세요" pattern="[0-9]*" title="숫자만 입력">
+					</div>
+				</li>
+			</ul>
+
+			<div class="btn-group-type1">
+				<button type="button" class="btn-medium width160 radius-half theme1-c-btn line">취소</button><button type="submit" class="btn-medium width160 radius-half theme1-c-btn">등록</button>
+			</div>
+		</div>		
+		</form>
+
+	</div>	
+</section>
+<!-- *컨텐츠* 끝 -->	
+	
+	
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

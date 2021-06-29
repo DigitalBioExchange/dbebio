@@ -1,0 +1,48 @@
+body { background:#fff; }
+main > header { position:relative; height:48px; margin:0 auto; background:#fff; border-bottom:2px solid #333; text-align:left; }
+main > header .prev { display:inline-block; position:absolute; top:14px; left:8px; }
+main > header .prev img { height:18px; }
+body.index main > header .prev { display:none; }
+main > header .cart { position:absolute; top:13px; right:45px; }
+main > header .cart img { height:18px; }
+main > header .menu { position:absolute; top:13px; right:13px; }
+main > header .menu img { height:14px; }
+main > header .logo { width:auto; height:23px; margin:12px 0 0 32px; }
+
+main > header .header-search { position:relative; position:absolute; top:8px; left:124px; width:calc(100% - 200px); height:30px; border:1px solid #4a4a4a; border-radius:3px; padding:0; }
+main > header .header-search input[type="text"] { position:absolute; top:0; left:0; width:83%; height:28px; border:0; border-radius:3px; padding:7px; font-size:16px; }
+main > header .header-search input[type="image"] { position:absolute; top:6px; right:8px; width:14px; height:15px; }
+
+main > section.content { min-height:422px; padding:0 0 50px; }
+body.index main > section.content { background:#f6f6f6;}
+main > section.content.bgcolor { background:#e7e7e7;}
+
+footer { background:#535353; color:#fff; text-align:center; padding:8px; font-size:11px; }
+footer .fnb a { display:inline-block; padding:0 5px 0 3px; color:#fff; border-right:1px solid #ccc; line-height:1; font-size:12px; }
+footer .fnb a:last-child { border-right:0; }
+footer .tel-time { background:#3a3a3a; margin:8px 0 0; padding:10px; text-align:center; color:#ccc; }
+footer .tel-time .tel { display:inline-block; height:20px; line-height:1; padding-left:22px; font-size:20px; font-weight:700; margin:0 0 5px; color:#19bad2; background:url('../../image/mobile/icon-tel.png') no-repeat left center; background-size:18px auto; }
+footer .info { display:none; }
+footer .info a { color:#c6c6c6; }
+footer .copyright { color:#8c8c8c; margin:5px 0 0; }
+
+/****************************/
+
+.uix-sub-banner { background:#f6f6f6; }
+
+
+body.index h2 { position:relative; text-align:left; font-size:14px; color:#000; margin:10px 0 10px 7px; }
+h2:first-child { margin-top:0; }
+h2 span { display:inline-block; color:#4b8e76; border:0; }
+body.index h2 .more { position:absolute; top:0; right:8px; display:inline-block; vertical-align:middle; width:22px; height:22px; background:url('../../image/mobile/btn-more.png') no-repeat left top; background-size:22px auto; }
+
+
+.uix-main-bbs { margin:0 7px; border:1px solid #ddd; }
+.uix-main-bbs:nth-of-type(2) { margin:0 7px; border-bottom:0; }
+.uix-main-bbs dt { background:#ececec; color:#333; position:relative; padding:8px 5px 8px 10px; font-size:13px; font-weight:700; border-bottom:1px solid #ddd; }
+.uix-main-bbs dd { padding:0; background:#fff; }
+.uix-main-bbs dd p { padding:5px 10px 2px; border-bottom:1px solid #ddd; }
+.uix-main-bbs dd p:last-child { border-bottom:0; }
+.uix-main-bbs dd a { display:inline-block; width:95%; font-size:12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.uix-main-bbs dd span { display:none; }
+.uix-main-bbs:nth-of-type(2) p:last-child { border-bottom:1px solid #ddd; }

@@ -1,0 +1,77 @@
+<!--! 88_Member_join_form !-->
+<?php
+$page_option = "Member_mobile_type";
+$log = "out";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>회원가입</h1>
+			<p>회원가입에 필요한 항목들을 입력해주세요.</p>
+		</div>
+
+		<form method="post" action="">
+			<div class="block-type-area">
+				<ul>
+					<li>
+						<div class="title">휴대폰번호</div>
+						<div class="con">
+							<select name="" class="input-regular">
+								<option value="" selected="selected">+01 USA</option>
+								<option value=""></option>
+							</select>
+							<div class="margin-t8">
+								<input type="text" id="" name="" placeholder="휴대폰번호를 입력해주세요" pattern="[0-9-]*" title="숫자와 -만 입력 가능"
+									class="input-regular radius4 btn-add"><button type="button" class="btn-regular radius4">Get
+									Authentication</button>
+							</div>
+							<div class="help-text">- 중복된 휴대폰번호입니다. 다른 휴대폰번호를 입력하세요.</div>
+						</div>
+					</li>
+					<li>
+						<div class="title">인증번호</div>
+						<div class="con">
+							<input type="text" name="" class="input-regular radius4 btn-add" placeholder="인증번호를 입력해주세요."
+								pattern="[0-9]*" title="숫자만 입력 가능"><button type="button" class="btn-regular radius4">확인</button>
+						</div>
+					</li>
+					<li>
+						<div class="title">비밀번호</div>
+						<div class="con">
+							<input type="password" name="" class="input-regular radius4" placeholder="비밀번호를 입력해주세요">
+							<div class="help-text">- 비밀번호는 4글자 이상 입력하세요.</div>
+						</div>
+					</li>
+					<li>
+						<div class="title">이름</div>
+						<div class="con">
+							<input type="text" name="" class="input-regular radius4" placeholder="이름을 입력해주세요">
+							<div class="help-text-large">
+								계속하면 DBE의 <a href="#none" class="theme2-c-font">이용약관</a> 및 <a href="#none"
+									class="theme2-c-font">개인정보처리방침</a>에 동의한 것으로 간주합니다.
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<div class="btn-group-type1">
+					<div class="center">
+						<button type="submit" class="btn-medium width160 theme1-c-btn radius-half">가입하기</button>
+					</div>
+				</div>
+			</div>
+		</form>
+
+	</div>
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

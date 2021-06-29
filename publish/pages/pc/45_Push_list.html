@@ -1,0 +1,120 @@
+<!--! 45_Push_list !-->
+<?php  
+$gnb = "4";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>알림함</h1>
+		</div>
+
+		<!-- *push-list* 시작 -->
+		<div class="push-list">
+			<ul>
+				<li>
+					<a href="#none">
+						<div class="con">
+							구매하신 상품이 발송 되었습니다.<br />
+							(CJ대한통운 20134578952156)
+						</div>
+						<div class="date">2020-11-26 </div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="con">
+							구매하신 상품은 잘 받으셨나요? 상품을 받으셨다면 구매후기를 작성해주세요
+						</div>
+						<div class="date">2020-11-26 </div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						<div class="con">
+							요청하신 취소 건이 처리되었습니다.
+						</div>
+						<div class="date">2020-11-26 </div>
+					</a>
+				</li>
+				<li class="read">
+					<a href="#none">
+						<div class="con">
+							1:1 문의에 대한 답변이 등록되었습니다.
+						</div>
+						<div class="date">2020-11-26 </div>
+					</a>
+				</li>
+				<li class="read">
+					<a href="#none">
+						<div class="con">
+							건강 체크하지 않은지 1주일이 지났어요!
+						</div>
+						<div class="date">2020-11-26 </div>
+					</a>
+				</li>
+				<li class="read">
+					<a href="#none">
+						<div class="con">
+							건강 체크하지 않은지 한달이 지났어요!
+						</div>
+						<div class="date">2020-11-26 </div>
+					</a>
+				</li>
+				<li class="read">
+					<a href="#none">
+						<div class="con">
+							D-7, Monthly 코인을 획득하려면 10번의 건강 체크가 더 필요합니다!
+						</div>
+						<div class="date">2020-11-26 </div>
+					</a>
+				</li>
+				<li class="read">
+					<a href="#none">
+						<div class="con">
+							요청하신 취소 건이 처리되었습니다.
+						</div>
+						<div class="date">2020-11-26 </div>
+					</a>
+				</li>
+			</ul>
+		</div><!-- *push-list* 끝 -->
+
+
+		<div class="paginate-area">
+			<ul>
+				<li class="dir prev"><a href="#"></a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li class="on"><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li class="dir next"><a href="#"></a></li>
+			</ul>
+		</div>
+
+	</div>
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<script>
+	$("document").ready(function () {
+		$(".push-list > ul > li a").on("click", function () {
+			$(this).parent("li").toggleClass("read");
+		});
+
+		$(".delete").on("click", function () {
+			$(this).parent("li").remove();
+		});
+	});
+</script>
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

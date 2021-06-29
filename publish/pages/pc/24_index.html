@@ -1,0 +1,110 @@
+<!--! 24_index(Empty,popup) !-->
+<?php 
+$page_option = "index";
+$gnb = "1";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+
+	<div class="index-main">
+		<div class="subject">
+			How is your health today?
+		</div>
+
+		<div class="bmi-bmr">
+			<ul>
+				<li class="tit">BMI</li>
+				<li class="icon">-</li>
+			</ul>
+			<ul>
+				<li class="tit">Body fat rate</li>
+				<li class="icon">-</li>
+			</ul>
+			<ul>
+				<li class="tit">BMR</li>
+				<li class="icon">-</li>
+			</ul>
+		</div>
+
+		<div class="tab-menu type-b">
+			<div class="inner-wrap">
+				<ul class="tab-header">
+					<li class="active">Today</li>
+					<li>This week</li>
+					<li>This month</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="list-empty">
+			<img src="../../images/pc/icon_healthcare.png" alt="image">
+			<p>
+				There is no measurement log yet.<br />
+				Register your device to measure your health status or add your own health status.
+			</p>
+		</div>
+
+	</div>
+
+
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<div class="popup popup-coin-info radius16 show">
+	<div class="inner-wrap">
+		<h5 class="popup-header">코인 안내</h5>
+		<div class="popup-content">
+			<p>
+				<strong class="theme2-c-font">100</strong> 코인이 지급될 예정입니다.<br />
+				프로필을 완성해서 추가 코인을 획득해보세요!
+			</p>
+		</div>
+		<button class="btn-medium flexible theme1-c-btn radius-half b-close">닫기</button>
+		<span class="popup-close b-close"></span> <!-- b-close는 bPopup Js의 close class-->
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".popup-coin-info.show").bPopup({ // 팝업시키려는 대상 class 입력, show값은 고정
+			zIndex: 100, // z-index 순서설정
+			appendTo: '#content',
+			modalClose: true, // 영역제외 클릭해도 팝업창 닫히게합니까?
+			escClose: true, // esc눌르면 화면닫히게
+			follow: [true, true], // 화면을 따라다니게 만들기 설정값은 고정되는부분을 true로 둠 x, y
+			modal: true, // true시 백그라운드 dim 추가여부 true시 dim배경생김
+			opacity: 0.4, // dim-layer opacity 설정
+			easing: 'linear' // animation css 효과 설정
+		});
+	});
+</script>
+
+
+<!-- tab 관련 JS start-->
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		$(".tab-menu").each(function (index, thisTab) {
+			$(thisTab).find(".tab-header > li").on("click", function () {
+				$(thisTab).find(".tab-header > li").removeClass("active");
+				$(this).addClass("active");
+				var hasContent = $(thisTab).hasClass(".tab-content");
+				var activeIndex = $(thisTab).find(".tab-header > .active").index();
+				$(thisTab).find(".tab-content > div").removeClass("active");
+				$(thisTab).find(".tab-content > div").eq(activeIndex).addClass("active");
+			});
+		});
+
+	});
+</script>
+<!-- tab 관련 JS end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

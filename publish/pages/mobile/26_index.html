@@ -1,0 +1,108 @@
+<!--! 26_index(This month) !-->
+<?php 
+$page_option = "index";
+$logo = "active";
+$back = "not";
+$gnb = "1";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+	
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	
+	<div class="index-main">
+		<div class="subject">
+			How is your health today?
+		</div>
+
+		<div class="bmi-bmr">
+			<ul>
+				<li class="tit">BMI</li>
+				<li class="icon Over">Over</li>
+			</ul>
+			<ul>
+				<li class="tit">Body fat rate</li>
+				<li class="icon Normal">Normal</li>
+			</ul>
+			<ul>
+				<li class="tit">BMR</li>
+				<li class="icon Low">Low</li>
+			</ul>
+		</div>
+		
+		<div class="tab-menu type-b">
+			<div class="inner-wrap">
+				<ul class="tab-header">
+					<li>Today</li>
+					<li>This week</li>
+					<li class="active">This month</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="This-month-result"><!-- This-month-result 시작 -->
+			<ul>
+				<li>
+					<div class="tit Weight">Weight</div>
+					<div class="graph">
+						<div class="chartjs-wrapper"><!-- cart 시작 -->
+						<canvas id="chartjs-0" class="chartjs" width="undefined" height="undefined"></canvas><script>new Chart(document.getElementById("chartjs-0"),{"type":"line","data":{"labels":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],"datasets":[{"label":"","data":[80,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,68],"fill":false,"borderColor":"#99c6d8","borderWidth":"2","pointBackgroundColor":"#fff","lineTension":0.1}]},"options":{}});</script></div><!-- cart 끌 -->
+					</div>
+				</li>
+				<li>
+					<div class="tit Body-fat-rate">Body fat rate</div>
+					<div class="graph">
+						<div class="chartjs-wrapper"><!-- cart 시작 -->
+						<canvas id="chartjs-1" class="chartjs" width="undefined" height="undefined"></canvas><script>new Chart(document.getElementById("chartjs-1"),{"type":"line","data":{"labels":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],"datasets":[{"label":"","data":[80,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,68],"fill":false,"borderColor":"#99c6d8","borderWidth":"2","pointBackgroundColor":"#fff","lineTension":0.1}]},"options":{}});</script></div><!-- cart 끌 -->
+					</div>
+				</li>
+				<li>
+					<div class="tit Health-score">Health score</div>
+					<div class="graph">
+						<div class="chartjs-wrapper"><!-- cart 시작 -->
+						<canvas id="chartjs-3" class="chartjs" width="undefined" height="undefined"></canvas><script>new Chart(document.getElementById("chartjs-3"),{"type":"line","data":{"labels":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],"datasets":[{"label":"","data":[80,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,68],"fill":false,"borderColor":"#99c6d8","borderWidth":"2","pointBackgroundColor":"#fff","lineTension":0.1}]},"options":{}});</script></div><!-- cart 끌 -->
+					</div>
+				</li>
+				<li>
+					<div class="tit BMI">BMI</div>
+					<div class="graph">
+						<div class="chartjs-wrapper"><!-- cart 시작 -->
+						<canvas id="chartjs-4" class="chartjs" width="undefined" height="undefined"></canvas><script>new Chart(document.getElementById("chartjs-4"),{"type":"line","data":{"labels":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],"datasets":[{"label":"","data":[80,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,72,75,68],"fill":false,"borderColor":"#99c6d8","borderWidth":"2","pointBackgroundColor":"#fff","lineTension":0.1}]},"options":{}});</script></div><!-- cart 끌 -->
+					</div>
+				</li>
+			</ul>
+		</div><!-- This-month-result 끝 -->
+
+	</div>
+
+
+
+</section>
+<!-- *컨텐츠* 끝 -->	
+	
+	
+
+<!-- tab 관련 JS start-->
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(".tab-menu").each(function(index, thisTab){
+	$(thisTab).find(".tab-header > li").on("click",function(){
+		$(thisTab).find(".tab-header > li").removeClass("active");
+		$(this).addClass("active");
+		var hasContent = $(thisTab).hasClass(".tab-content");
+		var activeIndex= $(thisTab).find(".tab-header > .active").index();
+		$(thisTab).find(".tab-content > div").removeClass("active");
+		$(thisTab).find(".tab-content > div").eq(activeIndex).addClass("active");
+	});
+});
+
+});
+</script>
+<!-- tab 관련 JS end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

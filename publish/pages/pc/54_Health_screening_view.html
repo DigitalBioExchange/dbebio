@@ -1,0 +1,262 @@
+<!--! 54_Health_screening_view !-->
+<?php 
+$gnb = "4";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="sub-title-area">
+		<h1>검진내역 보기</h1>
+	</div>
+
+	<!-- health-screening-view 시작 -->
+	<div class="health-screening-view">
+		<h1>기본정보</h1>
+		<div>
+			<ul>
+				<li class="tit">검진일</li>
+				<li class="con">2020-11-12</li>
+			</ul>
+			<ul>
+				<li class="tit">검진기관</li>
+				<li class="con">삼성병원</li>
+			</ul>
+		</div>
+
+		<h1>비만도 측정</h1>
+		<div>
+			<ul>
+				<li class="tit">신장</li>
+				<li class="con">181cm</li>
+			</ul>
+			<ul>
+				<li class="tit">체중</li>
+				<li class="con">65kg</li>
+			</ul>
+			<ul>
+				<li class="tit">허리둘레</li>
+				<li class="con">28 inch</li>
+			</ul>
+			<ul>
+				<li class="tit">체질량지수(BMI)</li>
+				<li class="con">19.8 kg/m²</li>
+			</ul>
+		</div>
+
+		<h1>검진결과 확인 및 질병 예측</h1>
+		<div>
+			<ul>
+				<li class="tit">혈압</li>
+				<li class="con">120mmHg/80mmHg</li>
+			</ul>
+			<ul>
+				<li class="tit">공복혈당</li>
+				<li class="con">80mmHg</li>
+			</ul>
+			<ul>
+				<li class="tit">총 콜레스테롤</li>
+				<li class="con">142mmHg</li>
+			</ul>
+			<ul>
+				<li class="tit">LDL 콜레스테롤</li>
+				<li class="con">119mmHg</li>
+			</ul>
+			<ul>
+				<li class="tit">중성지방</li>
+				<li class="con">140mmHg</li>
+			</ul>
+			<ul>
+				<li class="tit">HDL 콜레스테롤</li>
+				<li class="con">80mmHg</li>
+			</ul>
+		</div>
+
+		<h1>기타 검진 내역</h1>
+		<div>
+			<ul>
+				<li class="tit">요단백</li>
+				<li class="con">음성</li>
+			</ul>
+			<ul>
+				<li class="tit">혈색소</li>
+				<li class="con">11.9g/dL</li>
+			</ul>
+			<ul>
+				<li class="tit">혈청크레아티닌</li>
+				<li class="con">1.2mg/dL</li>
+			</ul>
+			<ul>
+				<li class="tit">신사구체여과율(GFR)</li>
+				<li class="con">89mL/min</li>
+			</ul>
+			<ul>
+				<li class="tit">AST(SGOT)</li>
+				<li class="con">22U/L</li>
+			</ul>
+			<ul>
+				<li class="tit">ALT(SGPT)</li>
+				<li class="con">12U/L</li>
+			</ul>
+			<ul>
+				<li class="tit">감마지피티(γ-GPT)</li>
+				<li class="con">43U/L</li>
+			</ul>
+
+			<div class="img-list">
+				<ul>
+					<li>
+						<a href="../../images/pc/no-image_type_a.png" class="photoswipe-view" data-group="img1">
+							<img src="../../images/pc/no-image_type_a.png" alt="image">
+						</a>
+					</li>
+					<li>
+						<a href="../../images/pc/no-image_type_a.png" class="photoswipe-view" data-group="img1">
+							<img src="../../images/pc/no-image_type_a.png" alt="image">
+						</a>
+					</li>
+					<li>
+						<a href="../../images/pc/no-image_type_a.png" class="photoswipe-view" data-group="img1">
+							<img src="../../images/pc/no-image_type_a.png" alt="image">
+						</a>
+					</li>
+					<li>
+						<a href="../../images/pc/no-image_type_a.png" class="photoswipe-view" data-group="img1">
+							<img src="../../images/pc/no-image_type_a.png" alt="image">
+						</a>
+					</li>
+					<li>
+						<a href="../../images/pc/no-image_type_a.png" class="photoswipe-view" data-group="img1">
+							<img src="../../images/pc/no-image_type_a.png" alt="image">
+						</a>
+					</li>
+					<li>
+						<a href="../../images/pc/no-image_type_a.png" class="photoswipe-view" data-group="img1">
+							<img src="../../images/pc/no-image_type_a.png" alt="image">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- health-screening-view 끝 -->
+
+	<div class="btn-group-type1">
+		<div class="center">
+			<button type="button" class="btn-medium width160 radius-half theme1-c-btn line">삭제</button>
+		</div>
+	</div>
+
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<!-- 포토스와이프(photoswipe.js) 관련 소스 start-->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="pswp__bg"></div>
+	<div class="pswp__scroll-wrap">
+		<div class="pswp__container">
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+		</div>
+		<div class="pswp__ui pswp__ui--hidden">
+			<div class="pswp__top-bar">
+				<div class="pswp__counter"></div>
+				<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+				<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+				<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+				<div class="pswp__preloader">
+					<div class="pswp__preloader__icn">
+						<div class="pswp__preloader__cut">
+							<div class="pswp__preloader__donut"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+				<div class="pswp__share-tooltip"></div>
+			</div>
+			<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+			</button>
+			<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+			</button>
+			<div class="pswp__caption">
+				<div class="pswp__caption__center"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		//이미지 그룹핑 a태그에 data-group 속성이 같은것끼리 묶음
+		var getMeta = function (url, callback) {
+			var img = new Image();
+			img.src = url;
+			img.onload = function () { callback(this.width, this.height); }
+		}
+		var items_group = {};
+		var item_group_name_seq = 0;
+		$(document).find('a.photoswipe-view').each(function (key, val) {
+
+			var $this = $(this);
+			var src = $this.attr('href');
+			var image_titles = $this.attr('title');
+			var image_w = $this.data('w') || '';
+			var image_h = $this.data('h') || '';
+			var item_group_name = $this.data('group');
+			if (!item_group_name) {
+				item_group_name = 'photoswipe_items_' + item_group_name_seq;
+				item_group_name_seq++;
+				$this.attr('data-group', item_group_name);
+			}
+			if (!items_group[item_group_name]) {
+				items_group[item_group_name] = [];
+			}
+			if (image_w == '') {
+				items_group[item_group_name].push({ 'src': src, title: image_titles });
+				var idx = (items_group[item_group_name].length) - 1;
+				getMeta(src, function (width, height) {
+					items_group[item_group_name][idx].w = width;
+					items_group[item_group_name][idx].h = height;
+				});
+			} else {
+				items_group[item_group_name].push({ 'src': src, 'w': image_w, 'h': image_h, title: image_titles });
+			}
+		});
+
+		var openPhotoSwipe = function (index, item_group_name) {
+			if (!item_group_name) return;
+			var pswpElement = document.querySelectorAll('.pswp')[0];
+			var items = items_group[item_group_name];
+			// define options (if needed)
+			var options = { index: index, history: false, bgOpacity: 0.7, closeOnScroll: false };
+			gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+			gallery.init();
+			if (item_group_name.indexOf('guide_pop') != -1) {
+				gallery.zoomTo(1);
+			}
+			/*if(item_group_name == 'guide_pop'){
+				gallery.zoomTo(1);
+			}*/
+		};
+		$('a.photoswipe-view').click(function (e) {
+			e.preventDefault();
+			var $this = $(this);
+			var item_group_name = $(this).data('group');
+			if (!item_group_name) return;
+			var sel = $("a.photoswipe-view[data-group='" + item_group_name + "']").index($this);
+			openPhotoSwipe(sel, item_group_name);
+		});
+	});
+//-->
+</script>
+<!-- 포토스와이프(photoswipe.js) 관련 소스 end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

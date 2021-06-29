@@ -1,0 +1,28 @@
+//
+// Responsive
+// --------------------------
+
+
+// Visible
+
+@include responsive-visibility('.visible-md');
+@include responsive-invisibility('.hidden-md');
+
+
+// Size
+
+// Small
+@media (max-width: $screen-sm-min) {
+	@include responsive-visibility('.visible-sm');
+	@include responsive-invisibility('.hidden-sm');
+}
+// Extra small
+@media (max-width: $screen-xs-min) {
+	@include responsive-visibility('.visible-xs');
+	@include responsive-invisibility('.hidden-xs');
+}
+// Large
+@media (min-width: $screen-lg-min) {
+	@include responsive-visibility('.visible-lg');
+	@include responsive-invisibility('.hidden-lg');
+}

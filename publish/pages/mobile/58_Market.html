@@ -1,0 +1,127 @@
+<!--! 58_Market !-->
+<?php
+$page_option = "header-white";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+	
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="sub-title-area">
+		<h1>마켓</h1>
+	</div>
+
+	<div class="market-list">
+		<div class="coin-price"><!-- coin-price 시작 -->
+			<div>
+				<div class="tit">LBXC</div>
+				<div class="con"><strong>123,123,123.0000</strong></div>
+				<div class="date">2020.12.21 기준</div>
+				<div class="plus"><span>3.20</span><span>0.12%</span></div>
+			</div>
+		</div><!-- coin-price 끝 -->
+
+		<div class="list">
+			<ul>
+				<li>
+					<a href="#none">
+					<div class="img">
+						<img src="../../images/mobile/pd_b_01.png" alt="image">
+					</div>	
+					<div>
+						<div class="title">
+							<p class="clamp1">오토첵 플러스 스마트 체지방계 체중계 제목 한 줄만 오토첵 플러스 스마트 체지방계 체중계 제목 한 줄만</p>
+						</div>
+						<div class="summary">
+							<p class="clamp1">상품의 간략 설명이 여기에 들어갑니다. 길어지면 말줄임표 사용 상품의 간략 설명이 여기에 들어갑니다. 길어지면 말줄임표 사용</p>
+						</div>
+						<div class="price-wrap">
+							<div class="origin">
+								<span class="dc">10%</span>
+								<span class="origin-price">$50,000.00</span>
+							</div>
+							<div class="price">
+								<strong>$45,000.00</strong>
+							</div>
+						</div>
+					</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+					<div class="img">
+						<img src="../../images/mobile/pd_b_01.png" alt="image">
+					</div>	
+					<div>
+						<div class="title">
+							<p class="clamp1">오토첵 플러스 스마트 체지방계 체중계 제목 한 줄만 오토첵 플러스 스마트 체지방계 체중계 제목 한 줄만</p>
+						</div>
+						<div class="summary">
+							<p class="clamp1">상품의 간략 설명이 여기에 들어갑니다. 길어지면 말줄임표 사용 상품의 간략 설명이 여기에 들어갑니다. 길어지면 말줄임표 사용</p>
+						</div>
+						<div class="price-wrap">
+							<div class="origin">
+								<span class="dc">10%</span>
+								<span class="origin-price">$50,000.00</span>
+							</div>
+							<div class="price">
+								<strong>$45,000.00</strong>
+							</div>
+						</div>
+					</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+					<div class="img">
+						<img src="../../images/mobile/pd_b_01.png" alt="image">
+					</div>	
+					<div>
+						<div class="title">
+							<p class="clamp1">오토첵 플러스 스마트 체지방계 체중계 제목 한 줄만 오토첵 플러스 스마트 체지방계 체중계 제목 한 줄만</p>
+						</div>
+						<div class="summary">
+							<p class="clamp1">상품의 간략 설명이 여기에 들어갑니다. 길어지면 말줄임표 사용 상품의 간략 설명이 여기에 들어갑니다. 길어지면 말줄임표 사용</p>
+						</div>
+						<div class="price-wrap">
+							<div class="origin">
+								<span class="dc">10%</span>
+								<span class="origin-price">$50,000.00</span>
+							</div>
+							<div class="price">
+								<strong>$45,000.00</strong>
+							</div>
+						</div>
+					</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</section>
+<!-- *컨텐츠* 끝 -->	
+	
+
+
+<!-- 말줄임 관련 JS start-->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.clamp1').each(function(index, clampOne) {
+	$clamp(clampOne, { clamp: 1 });
+	});
+	
+	$('.clamp2').each(function(index, clampTwo) {
+	$clamp(clampTwo, { clamp: 2 });
+	});
+	
+	$('.clamp3').each(function(index, clampThree) {
+	$clamp(clampThree, { clamp: 3 });
+	});
+});
+</script>
+<!-- 말줄임 관련 JS end-->
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

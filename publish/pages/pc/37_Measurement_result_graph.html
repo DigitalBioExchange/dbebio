@@ -1,0 +1,142 @@
+<!--! 37_Measurement_result_graph(주) !-->
+<?php 
+$gnb = "2";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>체성분 측정</h1>
+		</div>
+
+		<div class="tab-menu type-c">
+			<div class="inner-wrap">
+				<ul class="tab-header">
+					<li>측정내역</li>
+					<li class="active">그래프</li>
+				</ul>
+
+				<div class="tab-content">
+					<div>측정내역 내용</div>
+					<div class="active padding-t16">
+
+						<div class="tab-menu-inner split4">
+							<div>
+								<ul>
+									<li><a href="#none">일</a></li>
+									<li class="active"><a href="#none">주</a></li>
+									<li><a href="#none">월</a></li>
+									<li><a href="#none">년</a></li>
+								</ul>
+							</div>
+						</div>
+						<script>
+							$(".tab-menu-inner li").on("click", function () {
+								$(".tab-menu-inner li").removeClass("active");
+								$(this).toggleClass("active");
+							});	
+						</script>​
+
+						<div class="This-week-result">
+							<!-- This-week-result 시작 -->
+							<ul>
+								<li>
+									<div class="tit Weight">Weight</div>
+									<div class="graph">
+										<div class="chartjs-wrapper">
+											<!-- cart 시작 -->
+											<canvas id="chartjs-0" class="chartjs" width="undefined" height="undefined"></canvas>
+											<script>new Chart(document.getElementById("chartjs-0"), { "type": "line", "data": { "labels": ["12-01", "12-02", "12-03", "12-04", "12-05", "12-06", "12-07"], "datasets": [{ "label": "", "data": [75, 63, 68, 62, 69, 62, 65], "fill": "#e4eff3", "borderColor": "#99c6d8", "borderWidth": "2", "pointBackgroundColor": "#fff", "backgroundColor": "#e4eff3", "lineTension": 0.3 }] }, "options": {} });</script>
+										</div><!-- cart 끌 -->
+									</div>
+								</li>
+								<li>
+									<div class="tit BMI">BMI</div>
+									<div class="graph">
+										<div class="chartjs-wrapper">
+											<!-- cart 시작 -->
+											<canvas id="chartjs-1" class="chartjs" width="undefined" height="undefined"></canvas>
+											<script>new Chart(document.getElementById("chartjs-1"), { "type": "line", "data": { "labels": ["12-01", "12-02", "12-03", "12-04", "12-05", "12-06", "12-07"], "datasets": [{ "label": "", "data": [59, 63, 68, 62, 69, 62, 65], "fill": "#e4eff3", "borderColor": "#99c6d8", "borderWidth": "2", "pointBackgroundColor": "#fff", "backgroundColor": "#e4eff3", "lineTension": 0.3 }] }, "options": {} });</script>
+										</div><!-- cart 끌 -->
+									</div>
+								</li>
+								<li>
+									<div class="tit Body-fat-rate">Body fat rate</div>
+									<div class="graph">
+										<div class="chartjs-wrapper">
+											<!-- cart 시작 -->
+											<canvas id="chartjs-2" class="chartjs" width="undefined" height="undefined"></canvas>
+											<script>new Chart(document.getElementById("chartjs-2"), { "type": "line", "data": { "labels": ["12-01", "12-02", "12-03", "12-04", "12-05", "12-06", "12-07"], "datasets": [{ "label": "", "data": [65, 63, 68, 62, 69, 62, 65], "fill": "#e4eff3", "borderColor": "#99c6d8", "borderWidth": "2", "pointBackgroundColor": "#fff", "backgroundColor": "#e4eff3", "lineTension": 0.3 }] }, "options": {} });</script>
+										</div><!-- cart 끌 -->
+									</div>
+								</li>
+								<li>
+									<div class="tit Body-water-rate">Body water rate</div>
+									<div class="graph">
+										<div class="chartjs-wrapper">
+											<!-- cart 시작 -->
+											<canvas id="chartjs-3" class="chartjs" width="undefined" height="undefined"></canvas>
+											<script>new Chart(document.getElementById("chartjs-3"), { "type": "line", "data": { "labels": ["12-01", "12-02", "12-03", "12-04", "12-05", "12-06", "12-07"], "datasets": [{ "label": "", "data": [63, 63, 68, 62, 69, 62, 65], "fill": "#e4eff3", "borderColor": "#99c6d8", "borderWidth": "2", "pointBackgroundColor": "#fff", "backgroundColor": "#e4eff3", "lineTension": 0.3 }] }, "options": {} });</script>
+										</div><!-- cart 끌 -->
+									</div>
+								</li>
+								<li>
+									<div class="tit Bone-mass">Bone mass </div>
+									<div class="graph">
+										<div class="chartjs-wrapper">
+											<!-- cart 시작 -->
+											<canvas id="chartjs-4" class="chartjs" width="undefined" height="undefined"></canvas>
+											<script>new Chart(document.getElementById("chartjs-4"), { "type": "line", "data": { "labels": ["12-01", "12-02", "12-03", "12-04", "12-05", "12-06", "12-07"], "datasets": [{ "label": "", "data": [71, 63, 68, 62, 69, 62, 65], "fill": "#e4eff3", "borderColor": "#99c6d8", "borderWidth": "2", "pointBackgroundColor": "#fff", "backgroundColor": "#e4eff3", "lineTension": 0.3 }] }, "options": {} });</script>
+										</div><!-- cart 끌 -->
+									</div>
+								</li>
+								<li>
+									<div class="tit BMR">BMR</div>
+									<div class="graph">
+										<div class="chartjs-wrapper">
+											<!-- cart 시작 -->
+											<canvas id="chartjs-5" class="chartjs" width="undefined" height="undefined"></canvas>
+											<script>new Chart(document.getElementById("chartjs-5"), { "type": "line", "data": { "labels": ["12-01", "12-02", "12-03", "12-04", "12-05", "12-06", "12-07"], "datasets": [{ "label": "", "data": [71, 63, 68, 62, 69, 62, 65], "fill": "#e4eff3", "borderColor": "#99c6d8", "borderWidth": "2", "pointBackgroundColor": "#fff", "backgroundColor": "#e4eff3", "lineTension": 0.3 }] }, "options": {} });</script>
+										</div><!-- cart 끌 -->
+									</div>
+								</li>
+							</ul>
+						</div><!-- This-week-result 끝 -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<!-- tab 관련 JS start-->
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		$(".tab-menu").each(function (index, thisTab) {
+			$(thisTab).find(".tab-header > li").on("click", function () {
+				$(thisTab).find(".tab-header > li").removeClass("active");
+				$(this).addClass("active");
+				var hasContent = $(thisTab).hasClass(".tab-content");
+				var activeIndex = $(thisTab).find(".tab-header > .active").index();
+				$(thisTab).find(".tab-content > div").removeClass("active");
+				$(thisTab).find(".tab-content > div").eq(activeIndex).addClass("active");
+			});
+		});
+
+	});
+</script>
+<!-- tab 관련 JS end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

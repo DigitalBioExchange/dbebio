@@ -1,0 +1,85 @@
+<!--! 22_index(Empty) !-->
+<?php 
+$page_option = "index";
+$gnb = "1";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+	
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	
+	<div class="index-main">
+		<div class="logo">
+			<h1><img src="../../images/mobile/logo.png" alt="logo"></h1>
+		</div>
+
+		<div class="subject">
+			How is your health today?
+		</div>
+
+		<div class="bmi-bmr">
+			<ul>
+				<li class="tit">BMI</li>
+				<li class="icon">-</li>
+			</ul>
+			<ul>
+				<li class="tit">Body fat rate</li>
+				<li class="icon">-</li>
+			</ul>
+			<ul>
+				<li class="tit">BMR</li>
+				<li class="icon">-</li>
+			</ul>
+		</div>
+		
+		<div class="tab-menu type-b">
+			<div class="inner-wrap">
+				<ul class="tab-header">
+					<li class="active">Today</li>
+					<li>This week</li>
+					<li>This month</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="list-empty">
+			<img src="../../images/mobile/icon_healthcare.png" alt="image">
+			<p>
+				There is no measurement log yet.<br />
+				Register your device to measure your health status or add your own health status.
+			</p>
+		</div>
+
+	</div>
+
+
+
+</section>
+<!-- *컨텐츠* 끝 -->	
+	
+	
+
+<!-- tab 관련 JS start-->
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(".tab-menu").each(function(index, thisTab){
+	$(thisTab).find(".tab-header > li").on("click",function(){
+		$(thisTab).find(".tab-header > li").removeClass("active");
+		$(this).addClass("active");
+		var hasContent = $(thisTab).hasClass(".tab-content");
+		var activeIndex= $(thisTab).find(".tab-header > .active").index();
+		$(thisTab).find(".tab-content > div").removeClass("active");
+		$(thisTab).find(".tab-content > div").eq(activeIndex).addClass("active");
+	});
+});
+
+});
+</script>
+<!-- tab 관련 JS end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

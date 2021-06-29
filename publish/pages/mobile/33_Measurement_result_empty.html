@@ -1,0 +1,68 @@
+<!--! 33_Measurement_result_empty !-->
+<?php 
+$page_option = "header-white wrapper-padding-b0";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>체성분 측정</h1>
+		</div>
+
+		<div class="tab-menu type-c">
+			<div class="inner-wrap">
+				<ul class="tab-header">
+					<li>측정하기</li>
+					<li class="active">측정내역</li>
+					<li>그래프</li>
+				</ul>
+
+				<div class="tab-content">
+					<div>
+						측정하기 내용
+					</div>
+					<div class="active">
+						<div class="list-empty bgwhite large">
+							<img src="../../images/mobile/icon_empty.png" alt="image">
+							<p class="gray-d6-font">
+								측정 내역이 없습니다.
+							</p>
+						</div>
+					</div>
+					<div>그래프 내용</div>
+				</div>
+			</div>
+		</div>
+
+	</div>	
+</section>
+<!-- *컨텐츠* 끝 -->	
+	
+	
+
+<!-- tab 관련 JS start-->
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(".tab-menu").each(function(index, thisTab){
+	$(thisTab).find(".tab-header > li").on("click",function(){
+		$(thisTab).find(".tab-header > li").removeClass("active");
+		$(this).addClass("active");
+		var hasContent = $(thisTab).hasClass(".tab-content");
+		var activeIndex= $(thisTab).find(".tab-header > .active").index();
+		$(thisTab).find(".tab-content > div").removeClass("active");
+		$(thisTab).find(".tab-content > div").eq(activeIndex).addClass("active");
+	});
+});
+
+});
+</script>
+<!-- tab 관련 JS end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

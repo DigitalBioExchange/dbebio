@@ -1,0 +1,293 @@
+<!--! 35_Measurement_result_view(레이어 닫힘) !-->
+<?php 
+$gnb = "2";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+
+
+
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<div class="popup popup-Measurement_result_view radius16 show">
+	<div class="inner-wrap">
+		<h5 class="popup-header">상세 측정내역</h5>
+		<div class="popup-content">
+
+			<div class="Measurement-result-view">
+				<!-- Measurement-result-view 시작 -->
+				<div class="date">2020-11-26</div>
+				<div class="accordion">
+					<div class="inner-wrap">
+						<ul>
+							<li class="active">
+								<div class="accordion-header">
+									<p class="tit Weight">Weight</p>
+									<div class="con">
+										<strong>56.0</strong><span>kg</span>
+									</div>
+								</div>
+								<div class="accordion-content">
+									<div class="graph-progress step3">
+										<!-- graph-progress 시작 -->
+										<div>
+											<ul>
+												<li>낮음</li>
+												<li>표준</li>
+												<li>높음</li>
+											</ul>
+											<? $pointer_left = "50"; ?>
+											<span class="pointer" style="left: <?=$pointer_left?>%;"></span>
+										</div>
+									</div><!-- graph-progress 끝 -->
+								</div>
+							</li>
+							<li>
+								<div class="accordion-header">
+									<p class="tit BMI">BMI</p>
+									<div class="con">
+										<strong>20.08</strong>
+									</div>
+								</div>
+								<div class="accordion-content">
+									<div class="graph-progress step4">
+										<!-- graph-progress 시작 -->
+										<div>
+											<ul>
+												<li>낮음</li>
+												<li>표준</li>
+												<li>높음</li>
+												<li>초과</li>
+											</ul>
+											<? $pointer_left = "37.5"; ?>
+											<span class="pointer" style="left: <?=$pointer_left?>%;"></span>
+										</div>
+									</div><!-- graph-progress 끝 -->
+								</div>
+							</li>
+							<li>
+								<div class="accordion-header">
+									<p class="tit Body-fat-rate">Body fat rate</p>
+									<div class="con">
+										<strong>28.5</strong><span>%</span>
+									</div>
+								</div>
+								<div class="accordion-content">
+									<div class="graph-progress step4">
+										<!-- graph-progress 시작 -->
+										<div>
+											<ul>
+												<li>낮음</li>
+												<li>표준</li>
+												<li>높음</li>
+												<li>초과</li>
+											</ul>
+											<? $pointer_left = "37.5"; ?>
+											<span class="pointer" style="left: <?=$pointer_left?>%;"></span>
+										</div>
+									</div><!-- graph-progress 끝 -->
+								</div>
+							</li>
+							<li>
+								<div class="accordion-header">
+									<p class="tit Visceral-fat">Visceral fat</p>
+									<div class="con">
+										<span>레벨</span><strong>6</strong>
+									</div>
+								</div>
+								<div class="accordion-content">
+									<div class="graph-progress step3">
+										<!-- graph-progress 시작 -->
+										<div>
+											<ul>
+												<li>표준</li>
+												<li>약간 높음</li>
+												<li>높음</li>
+											</ul>
+											<? $pointer_left = "16.66"; ?>
+											<span class="pointer" style="left: <?=$pointer_left?>%;"></span>
+										</div>
+									</div><!-- graph-progress 끝 -->
+								</div>
+							</li>
+							<li>
+								<div class="accordion-header">
+									<p class="tit Body-water-rate">Body water rate</p>
+									<div class="con">
+										<strong>57.2</strong><span>%</span>
+									</div>
+								</div>
+								<div class="accordion-content">
+									<div class="graph-progress step3">
+										<!-- graph-progress 시작 -->
+										<div>
+											<ul>
+												<li>낮음</li>
+												<li>표준</li>
+												<li>높음</li>
+											</ul>
+											<? $pointer_left = "50"; ?>
+											<span class="pointer" style="left: <?=$pointer_left?>%;"></span>
+										</div>
+									</div><!-- graph-progress 끝 -->
+								</div>
+							</li>
+							<li>
+								<div class="accordion-header">
+									<p class="tit Muscle-rate">Muscle rate</p>
+									<div class="con">
+										<strong>34</strong><span>%</span>
+									</div>
+								</div>
+								<div class="accordion-content">
+									<div class="graph-progress step3">
+										<!-- graph-progress 시작 -->
+										<div>
+											<ul>
+												<li>낮음</li>
+												<li>표준</li>
+												<li>높음</li>
+											</ul>
+											<? $pointer_left = "16.66"; ?>
+											<span class="pointer" style="left: <?=$pointer_left?>%;"></span>
+										</div>
+									</div><!-- graph-progress 끝 -->
+								</div>
+							</li>
+							<li>
+								<div class="accordion-header">
+									<p class="tit Bone-mass">Bone mass</p>
+									<div class="con">
+										<strong>2.2</strong><span>kg</span>
+									</div>
+								</div>
+								<div class="accordion-content">
+									<div class="graph-progress step3">
+										<!-- graph-progress 시작 -->
+										<div>
+											<ul>
+												<li>낮음</li>
+												<li>표준</li>
+												<li>높음</li>
+											</ul>
+											<? $pointer_left = "16.66"; ?>
+											<span class="pointer" style="left: <?=$pointer_left?>%;"></span>
+										</div>
+									</div><!-- graph-progress 끝 -->
+								</div>
+							</li>
+							<li>
+								<div class="accordion-header">
+									<p class="tit BMR">BMR</p>
+									<div class="con">
+										<strong>1311.5</strong><span>kcal</span>
+									</div>
+								</div>
+								<div class="accordion-content">
+									<div class="graph-progress step2-BMR">
+										<!-- graph-progress 시작 -->
+										<div>
+											<ul>
+												<li>낮음</li>
+												<li>우수</li>
+											</ul>
+											<span class="center-label">1697kcal</span>
+											<? $pointer_left = "37"; ?>
+											<span class="pointer" style="left: <?=$pointer_left?>%;"></span>
+										</div>
+									</div><!-- graph-progress 끝 -->
+								</div>
+							</li>
+							<li>
+								<div class="accordion-header">
+									<p class="tit Metabolic-age">Metabolic age</p>
+									<div class="con">
+										<strong>25</strong><span>세</span>
+									</div>
+								</div>
+								<div class="accordion-content">
+									<div class="graph-progress step2-BMR">
+										<!-- graph-progress 시작 -->
+										<div>
+											<ul>
+												<li>낮음</li>
+												<li>높음</li>
+											</ul>
+											<span class="center-label">26세</span>
+											<? $pointer_left = "37"; ?>
+											<span class="pointer" style="left: <?=$pointer_left?>%;"></span>
+										</div>
+									</div><!-- graph-progress 끝 -->
+								</div>
+							</li>
+							<li>
+								<div class="accordion-header">
+									<p class="tit Health-score">Health scoree</p>
+									<div class="con">
+										<strong>90</strong><span>점</span>
+									</div>
+								</div>
+								<div class="accordion-content">
+									<div class="graph-progress step1-Health-score">
+										<!-- graph-progress 시작 -->
+										<div>
+											<ul>
+												<li>0</li>
+												<li>100</li>
+											</ul>
+											<? $pointer_left = "85"; ?>
+											<span class="pointer" style="left: <?=$pointer_left?>%;"></span>
+										</div>
+									</div><!-- graph-progress 끝 -->
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div><!-- Measurement-result-view 끝 -->
+
+		</div>
+		<span class="popup-close b-close"></span>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".popup-Measurement_result_view.show").bPopup({ // 팝업시키려는 대상 class 입력, show값은 고정
+			zIndex: 100, // z-index 순서설정
+			appendTo: '#content',
+			modalClose: true, // 영역제외 클릭해도 팝업창 닫히게합니까?
+			escClose: true, // esc눌르면 화면닫히게
+			follow: [true, true], // 화면을 따라다니게 만들기 설정값은 고정되는부분을 true로 둠 x, y
+			modal: true, // true시 백그라운드 dim 추가여부 true시 dim배경생김
+			opacity: 0.4, // dim-layer opacity 설정
+			easing: 'linear' // animation css 효과 설정
+		});
+	});
+</script>
+
+<!-- accordion 관련 JS start-->
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".accordion").each(function (index, thisAccordion) {
+			$(thisAccordion).find(".inner-wrap > ul > li > .accordion-header").on("click", function () {
+				$(this).parent("li").toggleClass("active", function () {
+					$(this).find(".accordion-content").toggle();
+				});
+			});
+			$(thisAccordion).find(".inner-wrap > ul > li.active > .accordion-content").show();
+		});
+	});
+</script>
+<!-- accordion 관련 JS end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

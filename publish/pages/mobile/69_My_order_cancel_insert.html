@@ -1,0 +1,256 @@
+<!--! 69_My_order_cancel_insert !-->
+<?php 
+$page_option = "header-white";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>취소 신청</h1>
+		</div>
+
+		
+		<div class="cart-list"><!-- cart-list 시작 -->
+			<div class="sub-title-small">
+				<h1>2020120100001</h1>
+			</div>
+			<ul>
+				<li>
+					<div class="p-img">
+						<div class="inner-wrap">
+							<a href="#none"><img src="../../images/mobile/pd_02.png" alt="image"></a>
+						</div>
+					</div>
+					<div class="info">
+						<div class="title clamp1">오토첵 플러스 스마트 체중계</div>
+						<div class="option">
+							<p class="clamp1">1개</p>
+						</div>
+						<div class="price">$45,000.00</div>
+					</div>
+				</li>
+				<li>
+					<div class="p-img">
+						<div class="inner-wrap">
+							<a href="#none"><img src="../../images/mobile/no-image_type_a.png" alt="image"></a>
+						</div>
+					</div>
+					<div class="info">
+						<div class="title clamp1">상품명이 여기에 표시됩니다.</div>
+						<div class="option">
+							<p class="clamp1">2개</p>
+						</div>
+						<div class="price">$45,000.00</div>
+					</div>
+				</li>
+			</ul>
+		</div><!-- cart-list 끝 -->
+
+		<form method="post" action="">
+		<div class="block-type-area">
+			<ul>
+				<li>
+					<div class="title">사유 입력</div>
+					<div class="con">
+						<textarea name="" rows="12" class="textarea-regular radius4 flexible" placeholder="취소 신청을 하는 상세한 사유를 입력해주세요."></textarea>
+					</div>
+				</li>
+				<li>
+					<div class="title">사진첨부</div>
+					<div class="con">
+						<div class="file-upload">
+							<input type="hidden" name="bg_file1_cnt" id="bg_file1_cnt" value="" />
+							<div class="gallery" id="bg_file1_view"></div>
+							<div class="upload">
+								<button type="button" class="btn-small img-type">사진 선택</button>
+								<input type="file" id="bg_file1" multiple="multiple" name="bg_file1[]" accept="image/*"/>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="btn-group-type1">
+			<button type="button" class="btn-medium width152 radius-half theme1-c-btn line">취소</button><button type="submit" class="btn-medium width152 radius-half theme1-c-btn">신청</button>
+		</div>
+		</form>				
+		
+	</div>	
+</section>
+<!-- *컨텐츠* 끝 -->	
+	
+	
+
+<!-- 파일 업로드 관련 JS start-->
+<script type="text/javascript">
+	var bg_file1 = Array(); //멀티업로드에 사용되는 $_FILES배열
+	var index1 = 0; //멀티업로드 이미지 삭제에 필요한 일렬번호
+	var bg_file2 = Array(); //멀티업로드에 사용되는 $_FILES배열
+	var index2 = 0; //멀티업로드 이미지 삭제에 필요한 일렬번호
+
+	function img_multiple_cnt_chk(file_name) {
+		var max_count = 10 - parseInt($('#'+file_name+'_cnt').val());
+		image_gallery_upload_multiple(file_name, max_count);
+	}
+	function _formatSizeUnits(bytes){
+		if      (bytes>=1000000000) {bytes=(bytes/1000000000).toFixed(2)+' GB';}
+		else if (bytes>=1000000)    {bytes=(bytes/1000000).toFixed(2)+' MB';}
+		else if (bytes>=1000)       {bytes=(bytes/1000).toFixed(2)+' KB';}
+		else if (bytes>1)           {bytes=bytes+' bytes';}
+		else if (bytes==1)          {bytes=bytes+' byte';}
+		else                        {bytes='0 byte';}
+		return bytes;
+	}
+	function handleImgFileSelect_1(e) {
+		var files = e.target.files;
+		var filesArr = Array.prototype.slice.call(files);
+		var img_cnt = parseInt($('#bg_file1_cnt').val()) || 0;
+		var tmp_type_pass = 0; //이미지 인지 확인하는 구분자
+		var tmp_count_pass = 0; //총 이미지수 확인하는 구분자
+		var tmp_cnt = 0; //이미지 올리는 숫자
+
+		filesArr.forEach(function(f) {
+			if ( !f.type.match("image") ) {
+				tmp_type_pass = 1;
+				return false;
+			} else {
+				bg_file1.push(f);
+			}
+			tot_img_cnt = img_cnt + filesArr.length;
+			if(tot_img_cnt > 10) {
+				tmp_count_pass = 1;
+				return false;
+			} else {
+				tmp_cnt++;
+			}
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				var html = '';
+				html += '<div class="img-thumb bg_file1_'+index1+'">';
+				html += '	<span onclick="deleteImageAction_1('+index1+')" class="delete"></span>';
+				html += '	<img src="'+e.target.result+'" data-file="'+f.name+'" ';
+				html += '</div>';
+				$("#bg_file1_view").append(html);
+				index1++;
+			}
+			reader.readAsDataURL(f);
+		});
+		if (tmp_type_pass == 1) {
+			alert("확장자는 이미지 확장자만 가능합니다.");
+		}
+		if (tmp_count_pass == 1) {
+			alert("총 10장이상 등록이 불가능합니다.");
+			$('#bg_file1').val('');
+		}
+		$(".file-upload").css('clear', 'left');
+		$("#bg_file1_cnt").val(img_cnt + tmp_cnt);
+	}
+	function deleteImageAction_1(index) {
+		// console.log("index : "+index);
+		bg_file1.splice(index, 1, null);
+		var img_id = ".bg_file1_"+index;
+		$(img_id).remove();
+		var img_cnt = parseInt($("#bg_file1_cnt").val());
+		img_cnt = img_cnt - 1;
+		$("#bg_file1_cnt").val(img_cnt);
+		// console.log(sel_files);
+	}
+
+	function handleImgFileSelect_2(e) {
+		var files = e.target.files;
+		var filesArr = Array.prototype.slice.call(files);
+		var img_cnt = parseInt($('#bg_file2_cnt').val()) || 0;
+		var tmp_type_pass = 0; //이미지 인지 확인하는 구분자
+		var tmp_count_pass = 0; //총 이미지수 확인하는 구분자
+		var tmp_cnt = 0; //이미지 올리는 숫자
+
+		filesArr.forEach(function(f) {
+			bg_file2.push(f);
+			tot_img_cnt = img_cnt + filesArr.length;
+			if(tot_img_cnt > 10) {
+				tmp_count_pass = 1;
+				return false;
+			} else {
+				tmp_cnt++;
+			}
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				console.log(f);
+				var html = '';
+				html += '<div class="file-thumb bg_file2_'+index2+'">';
+				html += '	<span onclick="deleteImageAction_2('+index2+')" class="delete"></span>';
+				if ( f.type.match("image") ) {
+					html += '<img src="'+e.target.result+'" data-file="'+f.name+'" ';
+				}else{
+					html += '<span class="name">'+f.name+'</span>';
+					html += '<span class="size">'+_formatSizeUnits(f.size)+'</span>';
+				}
+				html += '</div>';
+				$("#bg_file2_view").append(html);
+				index2++;
+			}
+			reader.readAsDataURL(f);
+		});
+		if (tmp_count_pass == 1) {
+			alert("총 10장이상 등록이 불가능합니다.");
+			$('#bg_file1').val('');
+		}
+		$(".file-upload").css('clear', 'left');
+		$("#bg_file2_cnt").val(img_cnt + tmp_cnt);
+	}
+	function deleteImageAction_2(index) {
+		 console.log("index : "+index);
+		bg_file2.splice(index, 1, null);
+		var img_id = ".bg_file2_"+index;
+		$(img_id).remove();
+		var img_cnt = parseInt($("#bg_file2_cnt").val());
+		img_cnt = img_cnt - 1;
+		$("#bg_file2_cnt").val(img_cnt);
+	}
+
+	$(document).ready(function() {
+		$('#bg_file1').on('change', handleImgFileSelect_1);
+		$('#bg_file2').on('change', handleImgFileSelect_2);
+	});
+	$(function(){
+		$(document).on('change', 'input.thumb_file', function(){
+			var $this = $(this);
+			var files = $(this)[0].files[0];
+			var preview_area = $this.parent().parent().find('.img-thumb');
+			if(!files){
+				$this.val('');
+				preview_area.html('');
+				return;
+			}
+			if(files.type.match('image')){
+				var img = "<img src='"+window.URL.createObjectURL(files)+"' class='preview_files' />";
+				var objs = "<span class='delete thumb_delete'></span>"+img;
+				preview_area.html(objs);
+			}else{
+				alert('이미지만 첨부하세요');
+			}
+		});
+		$(document).on('click', 'span.thumb_delete', function(e){
+			e.preventDefault();
+			var file_area = $(this).parent().parent().parent();
+			file_area.find('.img-thumb').html('');
+			if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+				var file_input = file_area.find('input.thumb_file');
+				file_input.replaceWith( file_input.clone(true) ); // ie 일때 초기화
+			} else {
+				file_area.find('input.thumb_file').val('');
+			}
+		});
+	});
+
+</script>
+<!-- 파일 업로드 관련 JS end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

@@ -1,0 +1,47 @@
+<!--! 83_1_push_setting !-->
+<?php 
+$page_option = "header-white";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>알림 설정</h1>
+		</div>
+		
+		<div class="app-setting">
+			<ul>
+				<li>
+					<h1>푸시 알림 설정</h1>
+					<div class="switch-setting">
+						<button class="btn-switch theme1-c-btn inactive"></button>
+					</div>
+				</li>
+			</ul>			
+		</div>
+
+	</div>	
+</section>
+<!-- *컨텐츠* 끝 -->	
+
+
+
+<!-- switch 관련 JS start-->
+<script type="text/javascript">
+	$(document).ready(function(){
+	$(".switch-setting").each(function(index, thisInactive){ //active 시키려는 대상의 부모 태그입력
+		$(thisInactive).find("button").on("click",function(){ //active 클래스를 넣으려는 태그입력
+			$(this).toggleClass("inactive");
+		});
+	});
+	});
+</script>
+<!-- switch 관련 JS end-->	
+	
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

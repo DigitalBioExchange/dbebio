@@ -1,0 +1,149 @@
+<!--! 65_order_success !-->
+<?php 
+$page_option = "bgwhite header-white";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>주문완료</h1>
+		</div>
+
+
+		<div class="result-area small">
+			<img src="../../images/mobile/icon_result.png" alt="icon" />
+			<h1>주문접수가 완료되었습니다.</h1>				
+			<p>주문번호 2020120100001</p>		
+		</div>
+
+		<div class="cart-list"><!-- cart-list 시작 -->
+			<div class="sub-title-small">
+				<h1>주문 정보</h1>
+			</div>
+			<ul>
+				<li>
+					<div class="p-img">
+						<div class="inner-wrap">
+							<a href="#none"><img src="../../images/mobile/pd_02.png" alt="image"></a>
+						</div>
+					</div>
+					<div class="info">
+						<div class="title clamp1">오토첵 플러스 스마트 체중계</div>
+						<div class="option">
+							<p class="clamp1">옵션1/옵션2 <span class="qu">1개</span></p>
+						</div>
+						<div class="price">$45,000.00</div>
+					</div>
+				</li>
+			</ul>
+		</div><!-- cart-list 끝 -->
+
+
+		<div class="order-info padding-b0">
+			<div class="sub-title-small padding-t32"><!-- 주문자 정보 시작 -->
+				<h1>주문자 정보</h1>
+			</div>
+			<div class="area">
+				<ul>
+					<li class="tit">이름</li>
+					<li class="con">김또깡</li>
+				</ul>
+				<ul>
+					<li class="tit">이메일</li>
+					<li class="con">ttokkang@ttotto.com</li>
+				</ul>	
+				<ul>
+					<li class="tit">연락처</li>
+					<li class="con">010-1234-5678</li>
+				</ul>	
+			</div><!-- 주문자 정보 끝 -->
+
+			<div class="sub-title-small padding-t0"><!-- 배송지정보 시작 -->
+				<h1>배송지정보</h1>
+			</div>
+			<div class="area">
+				<ul>
+					<li class="tit">이름</li>
+					<li class="con">김또깡</li>
+				</ul>
+				<ul>
+					<li class="tit">연락처</li>
+					<li class="con">010-1234-5678</li>
+				</ul>	
+				<ul>
+					<li class="tit">국가 선택</li>
+					<li class="con">대한민국</li>
+				</ul>
+				<ul>
+					<li class="tit">상세주소</li>
+					<li class="con">
+						서울시 구로구 디지털로 30길 28,
+						마리오타워 513호
+					</li>
+				</ul>	
+				<ul>
+					<li class="tit">배송 요청사항</li>
+					<li class="con">문 앞에 두고 가주세요</li>
+				</ul>	
+			</div><!-- 배송지정보 끝 -->
+
+			<div class="sub-title-small padding-t0"><!-- 결제정보 시작 -->
+				<h1>결제정보</h1>
+			</div>
+			<div class="area">
+				<ul>
+					<li class="tit">총 금액</li>
+					<li class="con">$ 000,000.00</li>
+				</ul>
+				<ul>
+					<li class="tit">할인 금액</li>
+					<li class="con">- $ 000,000.00</li>
+				</ul>	
+				<ul>
+					<li class="tit">배송비</li>
+					<li class="con">$ 000,000.00</li>
+				</ul>	
+				<ul>
+					<li class="tit">결제수수료</li>
+					<li class="con">$ 000,000.00</li>
+				</ul>
+				<ul>
+					<li class="tit">최종 결제 금액</li>
+					<li class="con">
+						<strong class="theme2-c-font font-weight600">LBXC 0.00</strong>
+						<p class="theme2-c-font">$ 000,000.00</p>
+					</li>
+				</ul>
+			</div><!-- 결제정보 끝 -->
+		</div>
+
+	</div>	
+</section>
+<!-- *컨텐츠* 끝 -->	
+	
+	
+
+<!-- 말줄임 관련 JS start-->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.clamp1').each(function(index, clampOne) {
+	$clamp(clampOne, { clamp: 1 });
+	});
+	
+	$('.clamp2').each(function(index, clampTwo) {
+	$clamp(clampTwo, { clamp: 2 });
+	});
+	
+	$('.clamp3').each(function(index, clampThree) {
+	$clamp(clampThree, { clamp: 3 });
+	});
+});
+</script>
+<!-- 말줄임 관련 JS end-->
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

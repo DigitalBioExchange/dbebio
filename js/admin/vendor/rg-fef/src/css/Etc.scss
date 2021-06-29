@@ -1,0 +1,140 @@
+
+// Clear fix
+
+.clearfix {
+	@extend %clearfix;
+}
+
+
+// hr
+
+hr {
+	margin: $margin-basic-horizontal 0;
+	border: none;
+	clear: both;
+	border-bottom: 1px solid $color-gray-light;
+	&.not-line {
+		border-bottom: 1px solid transparent;
+	}
+}
+
+
+// Block style
+
+.block-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.block-round {
+	border-radius: 4px;
+}
+.block-shadow {
+	box-shadow: 0 1px 5px rgba(0,0,0,.3);
+}
+
+
+// Responsive image
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.img-rounded, .img-circle, .img-thumnail {
+	margin: 5px;
+}
+.img-rounded {
+	border-radius: 6px;
+}
+.img-circle {
+	border-radius: 50%;
+}
+.img-thumnail {
+	display: inline-block;
+	padding: 4px;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+
+// close icon
+button.close {
+	padding: 0;
+	border: 0;
+	background: none;
+	cursor: pointer;
+	font-size: 21px;
+	font-weight: 700;
+	font-family: Arial, sans-serif;
+	line-height: 1;
+	-webkit-appearance: none;
+	color: #000;
+	filter: alpha(opacity=50);
+	opacity: .5;
+	text-shadow: 0 1px 0 #fff;
+	&:hover {
+		filter: alpha(opacity=100);
+		opacity: 1;
+	}
+}
+
+
+// Caret
+
+.caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+
+	&.down {
+		border-top: 4px dashed;
+		border-top: 4px solid\9;
+	}
+	&.up {
+		border-bottom: 4px dashed;
+		border-bottom: 4px solid\9;
+	}
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
+
+
+// Float
+
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+
+
+// Not margin
+
+.not-margin {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+
+// Show and hide content
+
+.show {
+	display: block !important;
+}
+
+.hide {
+	display: none !important;
+}
+
+.blind {
+	position: absolute;
+	overflow:hidden;
+	width:0;
+	height:0;
+	visibility:hidden;
+	font-size:0;
+	line-height:0;
+}

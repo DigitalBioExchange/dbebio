@@ -1,0 +1,67 @@
+<!--! 48_My_profile_modify !-->
+<?php 
+$page_option = "block-type-328";
+$gnb = "4";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>프로필 관리</h1>
+		</div>
+
+		<form method="post" action="">
+			<div class="block-type-area">
+				<ul>
+					<li>
+						<div class="title"><span>*</span> 키</div>
+						<div class="con">
+							<div class="unit">
+								<input type="text" id="" name="" placeholder="키를 입력해주세요" class="input-regular unit-add"
+									pattern="[0-9.]*" ​ title="숫자와 소수점만 입력 가능" required> <span>cm</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="title">성별</div>
+						<div class="con">
+							<select name="" class="input-regular">
+								<option value="" selected="selected">성별을 선택해주세요</option>
+								<option value=""></option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<div class="title"><span>*</span> 생년월일</div>
+						<div class="con">
+							<input type="text" name="" class="input-regular datepicker-here icon-type radius4" data-language="ko"
+								placeholder="YYYY-MM-DD">
+						</div>
+					</li>
+					<li>
+						<div class="title">닉네임</div>
+						<div class="con">
+							<input type="text" name="" class="input-regular radius4" placeholder="닉네임을 입력해주세요">
+						</div>
+					</li>
+				</ul>
+
+				<div class="btn-group-type1">
+					<button type="button" class="btn-medium width152 radius-half theme1-c-btn line">취소</button><button
+						type="submit" class="btn-medium width152 radius-half theme1-c-btn">수정</button>
+				</div>
+			</div>
+		</form>
+
+	</div>
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

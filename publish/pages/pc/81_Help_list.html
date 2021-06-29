@@ -1,0 +1,95 @@
+<!--! 81_Help_list !-->
+<?php 
+$gnb = "4";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>도움말</h1>
+		</div>
+
+		<div class="accordion faq">
+			<div class="inner-wrap">
+				<ul>
+					<li class="active">
+						<div class="accordion-header">
+							<p>글 제목이 여기에 모두 들어갑니다. </p>
+						</div>
+						<div class="accordion-content">
+							<p>
+								내용이 여기에 들어갑니다. 내용이 여기에 들어갑니다.
+								내용이 여기에 들어갑니다. 내용이 여기에 들어갑니다.
+								내용이 여기에 들어갑니다. 내용이 여기에 들어갑니다.
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="accordion-header">
+							<p>글 제목이 여기에 모두 들어갑니다. </p>
+						</div>
+						<div class="accordion-content">
+							<p>
+								내용이 여기에 들어갑니다. 내용이 여기에 들어갑니다.
+								내용이 여기에 들어갑니다. 내용이 여기에 들어갑니다.
+								내용이 여기에 들어갑니다. 내용이 여기에 들어갑니다.
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="accordion-header">
+							<p>글 제목이 여기에 모두 들어갑니다. </p>
+						</div>
+						<div class="accordion-content">
+							<p>
+								내용이 여기에 들어갑니다. 내용이 여기에 들어갑니다.
+								내용이 여기에 들어갑니다. 내용이 여기에 들어갑니다.
+								내용이 여기에 들어갑니다. 내용이 여기에 들어갑니다.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="paginate-area">
+			<ul>
+				<li class="dir prev"><a href="#"></a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li class="on"><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li class="dir next"><a href="#"></a></li>
+			</ul>
+		</div>
+
+	</div>
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<!-- accordion 관련 JS start-->
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".accordion").each(function (index, thisAccordion) {
+			$(thisAccordion).find(".inner-wrap > ul > li > .accordion-header").on("click", function () {
+				$(this).parent("li").toggleClass("active", function () {
+					$(this).find(".accordion-content").toggle();
+				});
+			});
+			$(thisAccordion).find(".inner-wrap > ul > li.active > .accordion-content").show();
+		});
+	});
+</script>
+<!-- accordion 관련 JS end-->
+
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

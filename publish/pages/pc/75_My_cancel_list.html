@@ -1,0 +1,151 @@
+<!--! 75_My_cancel_list !-->
+<?php 
+$gnb = "4";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>취소신청 문의</h1>
+		</div>
+
+		<!-- *board-list-area* 시작 -->
+		<div class="board-list-area">
+			<div class="board-list-header">
+				<div>
+					<ul>
+						<li class="num">번호</li>
+						<li class="o-number">주문번호</li>
+						<li class="date">작성일</li>
+						<li class="status">답변여부</li>
+					</ul>
+				</div>
+			</div>
+			<div class="board-list-content">
+				<div>
+					<ul>
+						<li class="num">10</li>
+						<li class="o-number"><a href="#none">2020120100001</a></li>
+						<li class="date">2021-00-00</li>
+						<li class="status"><span>답변대기</span></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li class="num">9</li>
+						<li class="o-number"><a href="#none">2020120100001</a></li>
+						<li class="date">2021-00-00</li>
+						<li class="status"><span>답변대기</span></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li class="num">8</li>
+						<li class="o-number"><a href="#none">2020120100001</a></li>
+						<li class="date">2021-00-00</li>
+						<li class="status"><span>답변대기</span></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li class="num">7</li>
+						<li class="o-number"><a href="#none">2020120100001</a></li>
+						<li class="date">2021-00-00</li>
+						<li class="status"><span class="theme1-c-font">답변완료</span></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li class="num">6</li>
+						<li class="o-number"><a href="#none">2020120100001</a></li>
+						<li class="date">2021-00-00</li>
+						<li class="status"><span class="theme1-c-font">답변완료</span></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li class="num">5</li>
+						<li class="o-number"><a href="#none">2020120100001</a></li>
+						<li class="date">2021-00-00</li>
+						<li class="status"><span>답변대기</span></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li class="num">4</li>
+						<li class="o-number"><a href="#none">2020120100001</a></li>
+						<li class="date">2021-00-00</li>
+						<li class="status"><span>답변대기</span></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li class="num">3</li>
+						<li class="o-number"><a href="#none">2020120100001</a></li>
+						<li class="date">2021-00-00</li>
+						<li class="status"><span>답변대기</span></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li class="num">2</li>
+						<li class="o-number"><a href="#none">2020120100001</a></li>
+						<li class="date">2021-00-00</li>
+						<li class="status"><span class="theme1-c-font">답변완료</span></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li class="num">1</li>
+						<li class="o-number"><a href="#none">2020120100001</a></li>
+						<li class="date">2021-00-00</li>
+						<li class="status"><span class="theme1-c-font">답변완료</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- *board-list-area* 끝 -->
+
+		<div class="paginate-area">
+			<ul>
+				<li class="dir prev"><a href="#"></a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li class="on"><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li class="dir next"><a href="#"></a></li>
+			</ul>
+		</div>
+
+	</div>
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<!-- 말줄임 관련 JS start-->
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.clamp1').each(function (index, clampOne) {
+			$clamp(clampOne, { clamp: 1 });
+		});
+
+		$('.clamp2').each(function (index, clampTwo) {
+			$clamp(clampTwo, { clamp: 2 });
+		});
+
+		$('.clamp3').each(function (index, clampThree) {
+			$clamp(clampThree, { clamp: 3 });
+		});
+	});
+</script>
+<!-- 말줄임 관련 JS end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

@@ -1,0 +1,135 @@
+<!--! 59_Market_product_view !-->
+<?php 
+$page_option = "header-white";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>상품정보</h1>
+		</div>
+		
+		<div class="product-view">
+			<div class="img">
+				<img src="../../images/mobile/pd_01_large.png" alt="image">
+			</div>
+			<div class="info"><!-- info 시작 -->
+				<div class="title">오토첵 플러스 스마트 체지방계 체중계</div>
+				<div class="summary">상품의 간략 설명이 여기에 들어갑니다.</div>
+				<div class="price-wrap">
+					<div class="origin">
+						<span class="dc">10%</span>
+						<span class="origin-price">$45.31</span>
+					</div>
+					<div class="price">
+						<strong>$40.78</strong>
+					</div>
+				</div>
+				<div class="quantity-total-price">
+					<div>
+						<div class="tit">수량</div>
+						<div class="con">
+							<div class="quantity-inner small">
+								<button type="button" class="btn-minus"><span>마이너스</span></button>
+								<input type="text" name="" class="input" value="1"/>
+								<button type="button" class="btn-plus"><span>플러스</span></button>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="tit">총 금액</div>
+						<div class="con total">
+							LBXC 43,359.74
+						</div>
+					</div>
+				</div>
+				<div class="btn">
+					<button type="button" class="btn-medium theme1-c-btn radius-half">주문하기</button><button type="button" class="btn-cart"></button>
+				</div>
+			</div><!-- info 끝 -->
+		</div>
+		
+		<div class="tab-menu type-d"><!-- tab-menu 시작 -->
+			<div class="inner-wrap">
+				<ul class="tab-header">
+					<li class="active">상품정보</li>
+					<li>구매후기</li>
+					<li>주문정보</li>
+				</ul>
+
+				<div class="tab-content margin-t0">
+					<div class="active">
+						<div class="product-info">
+							<div class="market-list"><!-- market-list 시작 -->
+								<div class="coin-price">
+									<div>
+										<div class="tit">LBXC</div>
+										<div class="con"><strong>123,123,123.0000</strong></div>
+										<div class="date">2020.12.21 기준</div>
+										<div class="minus"><span>3.20</span><span>0.12%</span></div>
+									</div>
+								</div>
+							</div><!-- market-list 끝 -->
+
+							<div class="admin-product-info">
+								관리자에서 입력한 상품정보 표시
+							</div>
+
+						</div>
+					</div>
+					<div>구매후기 내용</div>
+					<div>주문정보 내용</div>
+				</div>
+			</div>
+		</div><!-- tab-menu 끝 -->
+
+	</div>	
+</section>
+<!-- *컨텐츠* 끝 -->	
+	
+	
+
+<!-- 말줄임 관련 JS start-->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.clamp1').each(function(index, clampOne) {
+	$clamp(clampOne, { clamp: 1 });
+	});
+	
+	$('.clamp2').each(function(index, clampTwo) {
+	$clamp(clampTwo, { clamp: 2 });
+	});
+	
+	$('.clamp3').each(function(index, clampThree) {
+	$clamp(clampThree, { clamp: 3 });
+	});
+});
+</script>
+<!-- 말줄임 관련 JS end-->
+
+<!-- tab 관련 JS start-->
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(".tab-menu").each(function(index, thisTab){
+	$(thisTab).find(".tab-header > li").on("click",function(){
+		$(thisTab).find(".tab-header > li").removeClass("active");
+		$(this).addClass("active");
+		var hasContent = $(thisTab).hasClass(".tab-content");
+		var activeIndex= $(thisTab).find(".tab-header > .active").index();
+		$(thisTab).find(".tab-content > div").removeClass("active");
+		$(thisTab).find(".tab-content > div").eq(activeIndex).addClass("active");
+	});
+});
+
+});
+</script>
+<!-- tab 관련 JS end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

@@ -1,0 +1,231 @@
+<!--! 64_order !-->
+<?php 
+$page_option = "bgwhite header-white";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>주문하기</h1>
+		</div>
+
+		<form>
+			<div class="cart-list">
+				<!-- cart-list 시작 -->
+				<div class="sub-title-small">
+					<h1>상품 정보</h1>
+				</div>
+				<ul>
+					<li>
+						<div class="p-img">
+							<div class="inner-wrap">
+								<a href="#none"><img src="../../images/mobile/pd_02.png" alt="image"></a>
+							</div>
+						</div>
+						<div class="info">
+							<div class="title clamp1">오토첵 플러스 스마트 체중계</div>
+							<div class="option">
+								<p class="clamp1">옵션1/옵션2 <span class="qu">1개</span></p>
+							</div>
+							<div class="price">$45,000.00</div>
+						</div>
+					</li>
+					<li>
+						<div class="p-img">
+							<div class="inner-wrap">
+								<a href="#none"><img src="../../images/mobile/no-image_type_a.png" alt="image"></a>
+							</div>
+						</div>
+						<div class="info">
+							<div class="title clamp1">상품명이 여기에 표시됩니다.</div>
+							<div class="option">
+								<p class="clamp1">1개</p>
+							</div>
+							<div class="price">$45,000.00</div>
+						</div>
+					</li>
+				</ul>
+			</div><!-- cart-list 끝 -->
+
+
+			<div class="order-info">
+				<!-- 주문자 정보 시작 -->
+				<div class="sub-title-small padding-t32">
+					<h1>주문자 정보</h1>
+				</div>
+				<div class="block-type-area">
+					<ul class="padding-a0">
+						<li class="margin-t16">
+							<div class="title">이름</div>
+							<div class="con">
+								<input type="text" name="" class="input-regular radius4" value="이신원">
+							</div>
+						</li>
+						<li>
+							<div class="title">이메일</div>
+							<div class="con">
+								<!-- 2021-02-25 <input type="email" name="" class="input-regular radius4" value="userid@email.com" placeholder="이메일을 입력해주세요" pattern="[^ @]*@[^ @]*"​ required > -->
+								<input type="email" name="" class="input-regular radius4" value="userid@email.com"
+									placeholder="이메일을 입력해주세요" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="이메일 형식만 가능" ​
+									required>
+							</div>
+						</li>
+						<li>
+							<div class="title">연락처</div>
+							<div class="con">
+								<select name="" class="input-regular">
+									<option value="" selected="selected">+85 &nbsp; &nbsp; &nbsp; Republic of Korea</option>
+									<option value=""></option>
+								</select>
+								<!-- 2021-02-25 <input type="text" name="" class="input-regular radius4 margin-t8" value="010-1234-5678"
+									pattern="[0-9-\-]*" ​ title="숫자와 -만 입력 가능"> -->
+								<input type="text" name="" class="input-regular radius4 margin-t8" value="010-1234-5678"
+									pattern="[0-9-]*" ​ title="숫자와 -만 입력 가능">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- 주문자 정보 끝 -->
+
+			<div class="order-info">
+				<!-- 배송지정보 시작 -->
+				<div class="sub-title-small padding-t0">
+					<h1>배송지정보</h1>
+				</div>
+				<div class="block-type-area">
+					<ul class="padding-a0">
+						<li class="margin-t16">
+							<div class="title">수령자 이름</div>
+							<div class="con">
+								<input type="text" name="" class="input-regular radius4" placeholder="수령자 이름을 입력해주세요">
+							</div>
+						</li>
+						<li>
+							<div class="title">수령자 연락처</div>
+							<div class="con">
+								<select name="" class="input-regular">
+									<option value="" selected="selected">+01 &nbsp; &nbsp; &nbsp; USA</option>
+									<option value=""></option>
+								</select>
+								<!-- 2021-02-25 <input type="text" name="" class="input-regular radius4 margin-t8" placeholder="수령자 연락처를 입력해주세요"
+									pattern="[0-9-\-]*" ​ title="숫자와 -만 입력 가능"> -->
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="수령자 연락처를 입력해주세요"
+									pattern="[0-9-]*" ​ title="숫자와 -만 입력 가능">
+							</div>
+						</li>
+						<li>
+							<div class="title">주소</div>
+							<div class="con">
+								<!-- 2021-02-25 <input type="text" name="" class="input-regular radius4" placeholder="Address line1"
+									pattern="[0-9-a-z-A-Z.;\-]*" ​ title="영어대소문자, 숫자, 특수문자만 입력 가능"> 
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="Address line2(optional)"
+									pattern="[0-9-a-z-A-Z.;\-]*" ​ title="영어대소문자, 숫자, 특수문자만 입력 가능">
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="City"
+									pattern="[0-9-a-z-A-Z.;\-]*" ​ title="영어대소문자, 숫자, 특수문자만 입력 가능">
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="State/Province"
+									pattern="[0-9-a-z-A-Z.;\-]*" ​ title="영어대소문자, 숫자, 특수문자만 입력 가능">
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="Zip/Postal Code"
+									pattern="[0-9-a-z-A-Z.;\-]*" ​ title="영어대소문자, 숫자, 특수문자만 입력 가능">
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="Country"
+									pattern="[0-9-a-z-A-Z.;\-]*" ​ title="영어대소문자, 숫자, 특수문자만 입력 가능">
+								-->
+								<input type="text" name="" class="input-regular radius4" placeholder="Address line1"
+									pattern="[0-9a-zA-Z~!@#$%^&*()-_=+\|<>?,./;':\s]*" title="한글 입력 불가">
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="Address line2(optional)"
+									pattern="[0-9a-zA-Z~!@#$%^&*()-_=+\|<>?,./;':\s]*" title="한글 입력 불가">
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="City"
+									pattern="[0-9a-zA-Z~!@#$%^&*()-_=+\|<>?,./;':\s]*" title="한글 입력 불가">
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="State/Province"
+									pattern="[0-9a-zA-Z~!@#$%^&*()-_=+\|<>?,./;':\s]*" title="한글 입력 불가">
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="Zip/Postal Code"
+									pattern="[0-9a-zA-Z~!@#$%^&*()-_=+\|<>?,./;':\s]*" title="한글 입력 불가">
+								<input type="text" name="" class="input-regular radius4 margin-t8" placeholder="Country"
+									pattern="[0-9a-zA-Z~!@#$%^&*()-_=+\|<>?,./;':\s]*" title="한글 입력 불가">
+								<p class="help-text">- 영어대소문자, 숫자, 특수문자만 입력 가능</p>
+							</div>
+						</li>
+						<li>
+							<div class="title">배송 요청사항</div>
+							<div class="con">
+								<input type="text" name="" class="input-regular radius4" placeholder="배송 요청사항을 입력해주세요">
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="precautions margin-t24">
+					<h1>배송 불가지역 안내</h1>
+					<p>
+						현재 코로나 사태로 인해 중동지역은 배송이
+						불가능하거나 지연될 수 있습니다.
+					</p>
+				</div>
+			</div><!-- 배송지정보 끝 -->
+
+			<div class="order-info">
+				<!-- order-info 시작 -->
+				<div class="sub-title-small padding-t0">
+					<h1>결제정보</h1>
+				</div>
+
+				<div class="info">
+					<ul>
+						<li class="tit">총 금액</li>
+						<li class="con">$ 000,000.00</li>
+					</ul>
+					<ul>
+						<li class="tit">할인 금액</li>
+						<li class="con">- $ 000,000.00</li>
+					</ul>
+					<ul>
+						<li class="tit">배송비</li>
+						<li class="con">$ 000,000.00</li>
+					</ul>
+					<ul>
+						<li class="tit">결제수수료</li>
+						<li class="con">$ 000,000.00</li>
+					</ul>
+					<hr />
+					<ul class="total">
+						<li class="tit">최종 결제 금액</li>
+						<li class="con">
+							<strong>LBXC 0.00</strong>
+							<span>$000,000.00</span>
+						</li>
+					</ul>
+				</div>
+			</div><!-- order-info 끝 -->
+
+			<button type="submit" class="fixed-bottom-btn btn-large flexible theme1-c-btn">결제</button>
+		</form>
+
+	</div>
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<!-- 말줄임 관련 JS start-->
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.clamp1').each(function (index, clampOne) {
+			$clamp(clampOne, { clamp: 1 });
+		});
+
+		$('.clamp2').each(function (index, clampTwo) {
+			$clamp(clampTwo, { clamp: 2 });
+		});
+
+		$('.clamp3').each(function (index, clampThree) {
+			$clamp(clampThree, { clamp: 3 });
+		});
+	});
+</script>
+<!-- 말줄임 관련 JS end-->
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

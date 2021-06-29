@@ -1,0 +1,39 @@
+<!--! 86_Lang_setting !-->
+<?php 
+$gnb = "4";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>언어 설정(Language)</h1>
+		</div>
+
+
+		<div class="lang-setting">
+			<!-- lang-setting 시작 -->
+			<h1>언어설정(Language)</h1>
+			<button type="button" class="flexible radius8 active">한국어</button>
+			<button type="button" class="flexible radius8">English</button>
+		</div><!-- lang-setting 끝 -->
+
+	</div>
+</section>
+<!-- *컨텐츠* 끝 -->
+
+
+
+<script>
+	$(".lang-setting button").on("click", function () {
+		$(".lang-setting button").removeClass("active");
+		$(this).addClass("active");
+	});	
+</script>​
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

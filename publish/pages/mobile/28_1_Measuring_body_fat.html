@@ -1,0 +1,86 @@
+<!--! 28_1_Measuring_body_fat !-->
+<?php
+$page_option = "bgwhite header-white";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	<div class="inner-wrap">
+		<div class="sub-title-area">
+			<h1>체성분 측정</h1>
+		</div>
+
+		<div class="tab-menu type-c">
+			<div class="inner-wrap">
+				<ul class="tab-header">
+					<li class="active">측정하기</li>
+					<li>측정내역</li>
+					<li>그래프</li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="active">
+						<div class="Measuring-body-fat"><!-- Measuring-body-fat 시작 -->
+							<div class="list">
+								<div class="img">
+									<!-- 2021-03-17 <img src="../../images/mobile/pd_01.png" alt="image"> -->
+									<img src="../../images/mobile/pd_03.png" alt="image">
+								</div>
+								<div class="info">
+									<div class="tit">QN-Scale</div>
+									<div class="con">장치에 올라서면 전원이 켜집니다.</div>
+									
+									<!-- 2021-03-09 -->
+									<button type="button" class="btn-small">장치검색</button>
+								</div>
+							</div>
+							<a href="#none" class="btn-medium width312 radius-half theme1-c-btn">수기 입력</a>
+
+							<div class="precautions">
+								<h1>주의사항</h1>
+								<p>
+									 체내 심장박동 조절기 등 의료기기를 이식한 환자, 임산부의 경우 제품 사용을 중지해 주세요.
+								</p>
+								<p>
+									반드시 딱딱하고 평평한 바닥에 놓고 맨발로 측정하세요.
+								</p>
+							</div>
+						</div><!-- Measuring-body-fat 끝 -->
+					</div>
+					<div>측정내역 내용</div>
+					<div>그래프 내용</div>
+				</div>
+			</div>
+		</div>
+
+	</div>	
+</section>
+<!-- *컨텐츠* 끝 -->	
+	
+	
+
+<!-- tab 관련 JS start-->
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(".tab-menu").each(function(index, thisTab){
+	$(thisTab).find(".tab-header > li").on("click",function(){
+		$(thisTab).find(".tab-header > li").removeClass("active");
+		$(this).addClass("active");
+		var hasContent = $(thisTab).hasClass(".tab-content");
+		var activeIndex= $(thisTab).find(".tab-header > .active").index();
+		$(thisTab).find(".tab-content > div").removeClass("active");
+		$(thisTab).find(".tab-content > div").eq(activeIndex).addClass("active");
+	});
+});
+
+});
+</script>
+<!-- tab 관련 JS end-->
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

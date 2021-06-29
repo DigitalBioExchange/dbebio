@@ -1,0 +1,97 @@
+<!--! 42_1_My_coin_list !-->
+<?php 
+$page_option = "index";
+$logo = "active";
+$back = "not";
+$gnb = "3";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+	
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	
+	<div class="my-coin-list"><!-- my-coin-list 시작 -->
+		<div class="lbxc-box"><!-- lbxc-box 시작 -->
+			<div class="tit">보유 LBXC</div>
+			<div class="con"><strong>123.00</strong><span>LBXC</span></div>
+			<div class="address">0xc180ca565b34b5b63877674f5fe647e7da079022</div>
+			<div class="btn">
+				<a href="#none" class="send">보내기</a>
+				<a href="#none" class="copy-address">주소복사</a>
+			</div>
+		</div><!-- lbxc-box 끝 -->
+
+		<div class="list"><!-- list 시작 -->
+			<div class="date">2020-12-20</div>
+			<ul>
+				<li>
+					<div>
+						<span class="status waiting">입금대기</span>
+						<span class="datetime">12:06:33</span>
+						<span class="lbxc"><span class="plus">+ 3.1234</span> LBXC</span>
+					</div>
+					<span class="address">0xc180ca565b34b5b63877674f5fe647e7da079022</span>
+				</li>
+				<li>
+					<div>
+						<span class="status complete">입금완료</span>
+						<span class="datetime">12:06:33</span>
+						<span class="lbxc"><span class="plus">+ 3.1234</span> LBXC</span>
+					</div>
+					<span class="address">0xc180ca565b34b5b63877674f5fe647e7da079022</span>
+				</li>
+				<li>
+					<div>
+						<span class="status waiting">출금대기</span>
+						<span class="datetime">12:06:33</span>
+						<span class="lbxc"><span class="minus">- 3.1234</span> LBXC</span>
+					</div>
+					<span class="address">0xc180ca565b34b5b63877674f5fe647e7da079022</span>
+				</li>
+				<li>
+					<div>
+						<span class="status complete">출금완료</span>
+						<span class="datetime">12:06:33</span>
+						<span class="lbxc"><span class="plus">+ 3.1234</span> LBXC</span>
+					</div>
+					<span class="address">0xc180ca565b34b5b63877674f5fe647e7da079022</span>
+				</li>
+			</ul>
+		</div><!-- list 끝 -->
+
+		<div class="list"><!-- list 시작 -->
+			<div class="date">2020-11-26</div>
+			<ul>
+				<li>
+					<div>
+						<span class="status complete2">받기완료</span>
+						<span class="datetime">12:06:33</span>
+						<span class="lbxc"><span class="plus">+ 3.1234</span> LBXC</span>
+					</div>
+					<span class="address">보상지급 이름이 여기에 들어갑니다.</span>
+				</li>
+			</ul>
+		</div><!-- list 끝 -->
+	</div><!-- my-coin-list 끝 -->
+
+	<div class="paginate-area">
+	<ul>
+		<li class="dir prev"><a href="#"></a></li>
+		<li><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li class="on"><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">5</a></li>
+		<li class="dir next"><a href="#"></a></li>
+	</ul>
+	</div>
+
+</section>
+<!-- *컨텐츠* 끝 -->		
+	
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

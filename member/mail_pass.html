@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>e-mail page</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<style>
+body {margin:0;}
+.email-guide, .email-guide * {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.email-guide {
+	min-width:300px; max-width:600px;
+	padding:0 0 60px; margin:0 auto;
+	text-align:left;
+	background:#fff; border:1px solid #ccc;
+	font-family:"Apple SD Gothic Neo", "Malgun Gothic", "Helvetica Neue", 'Helvetica Neue', Arial, sans-serif;
+}
+.email-guide h1 {
+	margin:0; padding:30px 0;
+	font-size:30px; color:#fff;
+	background:#21c7f7; text-align:center; border-bottom:1px solid #ddd; 
+}
+.email-guide h1 img { vertical-align:middle; margin:0 40px 0 0; }
+.email-guide .body {
+	margin:30px 0 10px; padding:0;
+	border:1px solid #fff;
+	background:#fff;
+	text-align:center;
+	padding:0 65px; font-size:16px; line-height:24px;
+}
+.email-guide .body p {font-size:16px; color:#333; word-break:break-all;}
+.email-guide .body .password {
+	text-align:center; margin:25px 0 15px;
+	color:#333; padding:35px 0;
+	font-size:20px;
+	border:1px solid #ccc;
+}
+.email-guide .body .password strong { color:#000; font-size:20px; }
+.email-guide .nav {margin:0; text-align:center; padding:0 85px; }
+.email-guide .button {
+	display:inline-block; padding:0 30px;
+	background:#303030;
+	font-size:20px; color:#fff; text-decoration:none;
+	border-radius:3px; width:100%; height:56px; line-height:56px;
+}
+</style>
+</head>
+<body>
+<div class="email-guide" role="main">
+	<h1>임시비밀번호 안내</h1>
+	<div class="body">
+		<p>
+			회원님의 임시비밀번호를 안내해 드립니다.<br />
+			아래 비밀번호 변경을 클릭하면 임시비밀번호로 변경이 됩니다.
+		</p>
+		<p class="password">
+			임시 비밀번호 : <strong>[ [비밀번호] ]</strong>
+		</p>
+	</div>
+	<div class="nav">
+		<a href="[인증경로]" class="button">비밀번호 변경</a>
+	</div>
+</div>
+</body>
+</html>

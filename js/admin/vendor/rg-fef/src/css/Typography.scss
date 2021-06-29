@@ -1,0 +1,260 @@
+//
+// Typography
+// --------------------------
+
+body, input, textarea, button {
+	font-family: $typo-family-base;
+	font-size: $typo-size-base;
+	color: $color-gray-dark;
+	line-height: $typo-line-height;
+}
+
+
+// Headding
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: 600;
+	line-height: 1.1;
+	> small {font-size: 85%; color: $color-gray-light;}
+}
+h1, h2, h3, .h1, .h2, .h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+h1, .h1 {font-size: 36px; margin-top: 20px; margin-bottom: 12px;}
+h2, .h2 {font-size: 30px; margin-top: 16px; margin-bottom: 10px;}
+h3, .h3 {font-size: 24px; margin-top: 12px; margin-bottom: 8px;}
+h4, .h4 {font-size: 18px; margin-top: 8px; margin-bottom: 4px;}
+h5, .h5 {font-size: 14px; margin-top: 8px; margin-bottom: 4px;}
+h6, .h6 {font-size: 12px; margin-top: 8px; margin-bottom: 4px;}
+
+
+// Body
+
+p {
+	margin: 10px 0;
+}
+.text-lead {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.4;
+}
+
+
+// Link
+
+a {
+	color: $color-link;
+	text-decoration: none;
+	&:hover {text-decoration: underline; color: $color-link-hover;}
+}
+
+
+// Color
+
+.text-primary {color: $color-primary;}
+.text-success {color: $color-success;}
+.text-warning {color: $color-warning;}
+.text-danger {color: $color-danger;}
+.text-info {color: $color-info;}
+.text-dead {color: $color-dead;}
+
+
+// Background color
+
+.bg-primary {
+	@include box-bg-color($color-primary, #fff, $margin-basic-horizontal);
+}
+.bg-success {
+	@include box-bg-color($color-success, #fff, $margin-basic-horizontal);
+}
+.bg-warning {
+	@include box-bg-color($color-warning, #fff, $margin-basic-horizontal);
+}
+.bg-danger {
+	@include box-bg-color($color-danger, #fff, $margin-basic-horizontal);
+}
+.bg-info {
+	@include box-bg-color($color-info, #fff, $margin-basic-horizontal);
+}
+.bg-dead {
+	@include box-bg-color($color-dead, #fff, $margin-basic-horizontal);
+}
+
+.bg-primary-blur {
+	@include box-bg-color($color-primary-blur, $color-gray-base, $margin-basic-horizontal);
+}
+.bg-success-blur {
+	@include box-bg-color($color-success-blur, $color-gray-base, $margin-basic-horizontal);
+}
+.bg-warning-blur {
+	@include box-bg-color($color-warning-blur, $color-gray-base, $margin-basic-horizontal);
+}
+.bg-danger-blur {
+	@include box-bg-color($color-danger-blur, $color-gray-base, $margin-basic-horizontal);
+}
+.bg-info-blur {
+	@include box-bg-color($color-info-blur, $color-gray-base, $margin-basic-horizontal);
+}
+.bg-dead-blur {
+	@include box-bg-color($color-dead-blur, $color-gray-base, $margin-basic-horizontal);
+}
+
+
+// Text align
+
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+.text-justify {text-align: justify;}
+.text-nowrap {white-space: nowrap;}
+.text-top {vertical-align: top;}
+.text-middle {vertical-align: middle;}
+.text-bottom {vertical-align: bottom;}
+
+
+// Transformation
+
+.text-lowercase {text-transform: lowercase;}
+.text-uppercase {text-transform: uppercase;}
+.text-capitalize {text-transform: capitalize;}
+
+
+// List
+
+ul, ol {
+	margin: 10px 0;
+	padding-left: 24px;
+	ul, ol {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+.list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+.list-inline {
+	padding-left: 0;
+	margin-left: -5px;
+	list-style: none;
+	> li {
+		display: inline-block;
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+}
+
+
+// Description
+
+.text-description {
+	margin: 10px 0;
+	line-height: $typo-line-height;
+	> dt {font-weight:600;}
+	> dd {margin-left: 0;}
+	&.horizontal {
+		> dt {
+			float: left;
+			width: $typo-description-side-width;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		> dd {
+			margin-left: $typo-description-side-width + $margin-basic-horizontal;
+		}
+		@media (max-width: $screen-xs-max) {
+			&.responsive {
+				> dt {
+					float: none;
+					width: auto;
+				}
+				> dd {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+
+
+// Blockquote
+
+blockquote {
+	margin: $margin-basic-horizontal 0;
+	padding: 1px $margin-basic-horizontal;
+	font-size: $typo-size-base * 1.15;
+	border-width: 0 0 0 5px; border-color: #eee; border-style: solid;
+	font-weight: 600;
+	footer, small {
+		display: block;
+		margin: $margin-basic-horizontal 0;
+		font-size: 80%;
+		color: $color-gray-light;
+		&:before { content: '\2014 \00A0'; }
+	}
+
+	&.text-right {
+		text-align: right;
+		border-right-width: 5px;
+		border-left-width: 0;
+	}
+
+	&.color-primary { border-color: $color-primary; background-color: $color-primary-blur; }
+	&.color-success { border-color: $color-success; background-color: $color-success-blur; }
+	&.color-warning { border-color: $color-warning; background-color: $color-warning-blur; }
+	&.color-danger { border-color: $color-danger; background-color: $color-danger-blur; }
+	&.color-info { border-color: $color-info; background-color: $color-info-blur; }
+	&.color-dead { border-color: $color-dead; background-color: $color-dead-blur; }
+}
+
+
+// Code
+
+code {
+	padding: 2px 4px;
+	white-space: nowrap;
+	border-radius: 4px;
+	font-size: 90%;
+	font-family: $typo-family-code;
+	color: #c7254e;
+	background-color: #f9f2f4;
+}
+pre {
+	display: block;
+	padding: 8px;
+	margin: 10px 0;
+	font-family: $typo-family-code;
+	font-size: $typo-size-base * 0.9;
+	line-height: 1.42857143;
+	color: #333;
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color: #f8f8f8;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+
+// Brackets
+
+.text-brackets {
+	&:before {content: '['}
+	&:after {content: ']'}
+
+	&.small {
+		&:before {content: '('}
+		&:after {content: ')'}
+	}
+	&.quots {
+		&:before {content: '"'}
+		&:after {content: '"'}
+	}
+	&.small-quots {
+		&:before {content: "'"}
+		&:after {content: "'"}
+	}
+}
+

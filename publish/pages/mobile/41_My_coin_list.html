@@ -1,0 +1,40 @@
+<!--! 41_My_coin_list !-->
+<?php 
+$page_option = "index";
+$logo = "active";
+$back = "not";
+$gnb = "3";
+require_once('./inc/header.html');?>
+<!-- *헤더* include -->
+	
+
+	
+<!-- *컨텐츠* 시작 -->
+<section id="content">
+	
+	<div class="my-coin-list">
+		<div class="lbxc-box"><!-- lbxc-box 시작 -->
+			<div class="tit">보유 LBXC</div>
+			<div class="con"><strong>123.00</strong><span>LBXC</span></div>
+			<div class="address">0xc180ca565b34b5b63877674f5fe647e7da0790220xc180ca565b34b5b63877674f5fe647e7da079022</div>
+			<div class="btn">
+				<a href="#none" class="send">보내기</a>
+				<a href="#none" class="copy-address">주소복사</a>
+			</div>
+		</div><!-- lbxc-box 끝 -->
+
+		<div class="list-empty medium">
+			<img src="../../images/mobile/icon_empty.png" alt="image">
+			<p class="gray-d6-font">
+				LBXC 거래 내역이 없습니다.
+			</p>
+		</div>
+	</div>
+
+</section>
+<!-- *컨텐츠* 끝 -->	
+	
+
+
+<!-- *푸터* include -->
+<?php require_once('./inc/footer.html');?>

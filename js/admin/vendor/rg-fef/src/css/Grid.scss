@@ -1,0 +1,44 @@
+//
+// Grid
+// --------------------------
+
+
+// Row
+.grid {
+	margin-right: -#{$grid-margin * 0.5};
+	margin-left: -#{$grid-margin * 0.5};
+	@extend %clearfix;
+}
+
+
+// clear
+.clear-xs, .clear-sm, .clear-lg {display: none !important;}
+.clear-xs:after, .clear-sm:after, .clear-md:after, .clear-lg:after {content: ' '; display: table; clear: both;}
+.clear-md {display: block !important;}
+
+
+// Columns
+@include make-grid-columns();
+
+
+// Medium grid
+@include make-grid(md);
+
+
+// Small grid
+@media (max-width: $screen-sm-min) {
+	@include make-grid(sm);
+	.clear-sm {display: block !important;}
+}
+
+// Extra small grid
+@media (max-width: $screen-xs-min) {
+	@include make-grid(xs);
+	.clear-xs {display: block !important;}
+}
+
+// Large grid
+@media (min-width: $screen-lg-min) {
+	@include make-grid(lg);
+	.clear-lg {display: block !important;}
+}
